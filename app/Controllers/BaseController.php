@@ -38,6 +38,12 @@ abstract class BaseController extends Controller
     protected $helpers = [];
 
     /**
+     * The data to be passed to the view.
+     * @var array
+     */
+    protected $viewData = [];
+
+    /**
      * Constructor.
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
@@ -48,5 +54,6 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+
     }
 }
