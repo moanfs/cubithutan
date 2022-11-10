@@ -6,6 +6,7 @@
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style.css') ?>">
 
     <!-- STYLES -->
 
@@ -218,7 +219,7 @@
         </ul>
     </div>
 
-    <div class="heroe">
+    <div class="heroe text-red">
 
         <h1>Welcome to CodeIgniter <?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
 
