@@ -5,6 +5,13 @@ $purple-lighter: rgba(221, 216, 255, 0.5);
 $cream: #F4EFD3;
 $cream-lighter: rgba(244, 239, 211, 0.5);
 $white: #FFFFFF;
+$black: #000000;
+$dark: #292B2C;
+//bootstrao color
+$primary: #0275D8;
+$success: #5CB85C;
+$info: #5BC0DE;
+$warning: #F0AD4E;
 
 // breakpoint
 $sm: 576px;
@@ -13,6 +20,32 @@ $lg: 992px;
 
 // shadow
 $shadow: 0px 0px 18px rgba(0, 0, 0, 0.25);
+$shadow-sm: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+// function
+@mixin hero-item($color) {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+	padding: 12px 16px;
+	background-color: $color;
+	color: $white;
+	border-radius: 12px;
+	box-shadow: $shadow;
+
+	h2 {
+		font-size: 1rem;
+	}
+
+	p {
+		font-size: .875rem;
+	}
+
+	.bi {
+		font-size: 1.75rem;
+		margin-right: 12px;
+	}
+}
 
 // @media (min-width: $md) {
 
@@ -21,6 +54,10 @@ $shadow: 0px 0px 18px rgba(0, 0, 0, 0.25);
 //reset p,h margin
 p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
@@ -38,6 +75,78 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 		img {
 			margin-right: 8px;
+		}
+	}
+
+	.nav-link {
+		font-family: 'Kanit', sans-serif;
+		color: $dark;
+
+		&:hover {
+			color: $purple;
+		}
+	}
+}
+
+.hero {
+	margin: 32px 0;
+
+	.row {
+		margin: 0;
+
+		.hero-main {
+			display: flex;
+			align-items: center;
+			margin-bottom: 8px;
+			padding: 32px;
+			background-color: $purple-darker;
+			color: $white;
+			border-radius: 12px;
+			box-shadow: $shadow;
+
+			h1 {
+				font-size: 1.4rem;
+				margin-bottom: 8px;
+			}
+
+			p {
+				font-size: .875rem;
+			}
+
+			.hero-cta {
+				margin-top: 8px;
+				padding: 8px 16px;
+				background-color: $white;
+				color: $dark;
+				border: 0;
+				border-radius: 6px;
+
+				.bi {
+					margin-left: 4px;
+				}
+			}
+
+			.hero-img {
+				margin-left: auto;
+			}
+		}
+
+		.hero-side {
+			.online-chat {
+				@include hero-item($primary);
+			}
+
+			.voice-chat {
+				@include hero-item($success);
+			}
+
+			.offline-chat {
+				@include hero-item($info);
+			}
+
+			.podcast {
+				@include hero-item($warning);
+			}
 		}
 	}
 }
@@ -67,7 +176,7 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 			}
 
 			.bi {
-				font-size: 24px;
+				font-size: 1.5rem;
 				margin-right: 8px;
 			}
 		}
