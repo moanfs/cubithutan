@@ -6,6 +6,8 @@
 	<title>Cubit Hutan</title>
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style.css') ?>">
+	<!-- bootstrap icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg">
@@ -69,7 +71,42 @@
 
 	<?= $this->renderSection('content') ?>
 
-	footer
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-5">
+					<p>
+						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
+					</p>
+					<div class="footer-img">
+						<img src="<?= base_url('assets/img/logo.png') ?>" />
+					</div>
+					<p>Copyright 2022 Cubit Hutan</p>
+				</div>
+				<div class="col-12 col-md-3">
+					<a class="footer-link" href="#">Konseling Individual Online</a>
+					<a class="footer-link" href="#">Konseling Individual Offline</a>
+					<a class="footer-link" href="#">Curhat</a>
+					<a class="footer-link" href="#">Podcast</a>
+				</div>
+				<div class="col-12 col-md-2">
+					<a class="footer-link" href="#">Tentang Kami</a>
+					<a class="footer-link" href="#">Kontak</a>
+				</div>
+				<div class="col-12 col-md-2">
+					<p>Media Sosial</p>
+					<div>
+						<i class="bi bi-instagram"></i>
+						<i class="bi bi-twitter"></i>
+						<i class="bi bi-whatsapp"></i>
+						<i class="bi bi-spotify"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 </body>
 </html>

@@ -4,12 +4,23 @@ $purple-darker: #6C4AB6;
 $purple-lighter: rgba(221, 216, 255, 0.5);
 $cream: #F4EFD3;
 $cream-lighter: rgba(244, 239, 211, 0.5);
+$white: #FFFFFF;
+
+// breakpoint
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
 
 // shadow
 $shadow: 0px 0px 18px rgba(0, 0, 0, 0.25);
 
-h1 {
-	color: $purple;
+// @media (min-width: $md) {
+
+// }
+
+//reset p,h margin
+p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	margin: 0;
 }
 
 .navbar {
@@ -27,6 +38,38 @@ h1 {
 
 		img {
 			margin-right: 8px;
+		}
+	}
+}
+
+.footer {
+	background-color: $purple-darker;
+	color: $white;
+	padding: 32px 0;
+
+	.row {
+		margin: 0;
+
+		.col-12 {
+			margin-bottom: 8px;
+
+			.footer-link {
+			display: block;
+			color: inherit;
+			text-decoration: none;
+			}
+
+			.footer-img {
+				background-color: $purple;
+				border-radius: 6px;
+				width: fit-content;
+				margin: 8px 0;
+			}
+
+			.bi {
+				font-size: 24px;
+				margin-right: 8px;
+			}
 		}
 	}
 }
