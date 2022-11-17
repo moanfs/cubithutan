@@ -21,28 +21,28 @@
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="hero-side">
-						<div class="online-chat">
+						<div class="hero-online-chat">
 							<i class="bi bi-chat-right-text"></i>
 							<div>
 								<h2>Percakapan obrolan online</h2>
 								<p>Mulai percakapan obrolan online untuk mencurahkan keluh kesah</p>
 							</div>
 						</div>
-						<div class="voice-chat">
+						<div class="hero-voice-chat">
 							<i class="bi bi-telephone-inbound"></i>
 							<div>
 								<h2>Percakapan Suara</h2>
 								<p>Mulai percakapan suara untuk mencurahkan keluh kesah</p>
 							</div>
 						</div>
-						<div class="offline-chat">
+						<div class="hero-offline-chat">
 							<i class="bi bi-people"></i>
 							<div>
 								<h2>Percakapan Tatap Muka</h2>
 								<p>Lebih dekat lagi dengan malakukan pertemuan tatap muka</p>
 							</div>
 						</div>
-						<div class="podcast">
+						<div class="hero-podcast">
 							<i class="bi bi-headphones"></i>
 							<div>
 								<h2>Mendengarkan Podcast</h2>
@@ -127,7 +127,21 @@
 				</div>
 			</div>
 		</div>
-		
+	</div>
+	<div class="podcast">
+		<div class="container">
+			<div class="podcast-heading">
+				<h1>Dengarkan Kami Lewat Podcast</h1>
+				<p>Mendengarkan cerita orang lain dapat membantu mendapatkan prespektif lain, loh</p>
+			</div>
+			<div class="podcast-playlist">
+				<iframe class="podcast-latest" src="https://open.spotify.com/embed/episode/1tMsuM06OQmBTKtLBP0TYm?si=96fbd28b78bc44ab"></iframe>
+				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/6reBRsYux87Lt6xLSdkG0M?si=3284e9c8061845f4"></iframe>
+				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4owOYNFwxXICMQwrog9LNK?si=4004245b3ebc4ad2"></iframe>
+				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4iGrj9Dkttq86TkI1lvDOG?si=c7b83f7cb9094931"></iframe>
+			</div>
+			<a class="podcast-more" href="#">Lihat Semua Episode →</a>
+		</div>
 	</div>
 </main>
 
