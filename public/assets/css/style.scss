@@ -312,3 +312,56 @@ body {
 		}
 	}
 }
+
+.modal {
+	.modal-dialog {
+		width: fit-content;
+
+		.modal-body {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 100%;
+			align-items: center;
+
+			img {
+				margin-bottom: 16px;
+			}
+
+			p {
+				margin-bottom: 16px;
+			}
+
+			.login {
+				width: 100%;
+
+				.form-control {
+					margin-bottom: 16px;
+					width: 100%;
+				}
+
+				.btn {
+					margin: 16px 0;
+					width: 100%;
+				}
+
+				a {
+					display: block;
+					text-align: right;
+					font-weight: 500;
+					color: $primary;
+					text-decoration: none;
+				}
+			}
+
+			span {
+				margin: 8px 16px;
+				
+				a {
+					font-weight: 500;
+					color: $primary;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

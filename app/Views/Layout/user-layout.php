@@ -55,6 +55,11 @@
 							Kontak
 						</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+							Test login
+						</a>
+					</li>
 				</ul>
 
 				<div class="navbar-right">
@@ -109,6 +114,30 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- modal -->
+
+	<div class="modal" id="loginModal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+		        	<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<img src="<?= base_url('assets/img/logo.png') ?>" />
+					<p>Yuk Masuk Dulu!</p>
+					<form class="login">
+						<input class="form-control" type="text" placeholder="Masukan email atau nomor hp" />
+						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
+						<a href="#">Lupa Kata Sandi?</a>
+						<button class="btn btn-primary" type="submit">Masuk</button>
+					</form>
+					<span>Belum Memiliki Akun? <a href="#">Daftar akun sekarang</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>

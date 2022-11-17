@@ -218,3 +218,35 @@ body {
       .footer .row .col-12 .bi {
         font-size: 1.5rem;
         margin-right: 8px; }
+
+.modal .modal-dialog {
+  width: fit-content; }
+  .modal .modal-dialog .modal-body {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center; }
+    .modal .modal-dialog .modal-body img {
+      margin-bottom: 16px; }
+    .modal .modal-dialog .modal-body p {
+      margin-bottom: 16px; }
+    .modal .modal-dialog .modal-body .login {
+      width: 100%; }
+      .modal .modal-dialog .modal-body .login .form-control {
+        margin-bottom: 16px;
+        width: 100%; }
+      .modal .modal-dialog .modal-body .login .btn {
+        margin: 16px 0;
+        width: 100%; }
+      .modal .modal-dialog .modal-body .login a {
+        display: block;
+        text-align: right;
+        font-weight: 500;
+        color: #0275D8;
+        text-decoration: none; }
+    .modal .modal-dialog .modal-body span {
+      margin: 8px 16px; }
+      .modal .modal-dialog .modal-body span a {
+        font-weight: 500;
+        color: #0275D8;
+        text-decoration: none; }
