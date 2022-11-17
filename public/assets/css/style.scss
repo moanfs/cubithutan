@@ -3,11 +3,12 @@ $purple: #DDD8FF;
 $purple-darker: #6C4AB6;
 $purple-lighter: rgba(221, 216, 255, 0.5);
 $cream: #F4EFD3;
+$cream-darker: #CBBF7B;
 $cream-lighter: rgba(244, 239, 211, 0.5);
 $white: #FFFFFF;
 $black: #000000;
 $dark: #292B2C;
-//bootstrao color
+//bootstrap color
 $primary: #0275D8;
 $success: #5CB85C;
 $info: #5BC0DE;
@@ -45,6 +46,16 @@ $shadow-sm: 0px 0px 4px rgba(0, 0, 0, 0.25);
 		font-size: 1.75rem;
 		margin-right: 12px;
 	}
+}
+
+@mixin comparison-item($color) {
+	margin-bottom: 8px;
+	padding: 8px 16px;
+	font-size: 1.25rem;
+	font-weight: 400;
+	background-color: $color;
+	color: $white;
+	border-radius: 6px;
 }
 
 // @media (min-width: $md) {
@@ -118,6 +129,7 @@ body {
 				padding: 8px 16px;
 				background-color: $white;
 				color: $dark;
+		
 				border: 0;
 				border-radius: 6px;
 
@@ -146,6 +158,49 @@ body {
 
 			.podcast {
 				@include hero-item($warning);
+			}
+		}
+	}
+}
+
+.comparison {
+	margin: 32px 16px;
+
+	.comparison-heading {
+		margin-bottom: 16px;
+		text-align: center;
+
+		h1 {
+			font-size: 2.25rem;
+		}
+
+		p {
+			font-size: 1.25rem;
+		}
+	}
+
+	.comparison-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.card {
+			margin: 8px;
+			border-radius: 12px;
+			box-shadow: $shadow-sm;
+
+			.card-body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.peer-konseling {
+					@include comparison-item($purple-darker);
+				}
+
+				.curhat {
+					@include comparison-item($cream-darker);
+				}
 			}
 		}
 	}

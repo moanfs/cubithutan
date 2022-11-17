@@ -78,15 +78,6 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-5">
-					<p>
-						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
-					</p>
-					<div class="footer-img">
-						<img src="<?= base_url('assets/img/logo.png') ?>" />
-					</div>
-					<p>Copyright 2022 Cubit Hutan</p>
-				</div>
 				<div class="col-12 col-md-3">
 					<a class="footer-link" href="#">Konseling Individual Online</a>
 					<a class="footer-link" href="#">Konseling Individual Offline</a>
@@ -105,6 +96,15 @@
 						<i class="bi bi-whatsapp"></i>
 						<i class="bi bi-spotify"></i>
 					</div>
+				</div>
+				<div class="col-12 col-md-5 order-md-first">
+					<p>
+						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
+					</p>
+					<div class="footer-img">
+						<img src="<?= base_url('assets/img/logo.png') ?>" />
+					</div>
+					<p>Copyright 2022 Cubit Hutan</p>
 				</div>
 			</div>
 		</div>
