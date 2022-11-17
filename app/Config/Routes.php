@@ -37,6 +37,11 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('/', 'Dashboard::index');
+
+    $routes->group('konseling', ['namespace' => 'App\Controllers\User'], function ($routes) {
+        $routes->get('online', 'Konseling::online');
+        $routes->get('offline', 'Konseling::offline');
+    });
 });
 /*
  * --------------------------------------------------------------------
