@@ -230,15 +230,15 @@ body {
       margin-bottom: 16px; }
     .modal .modal-dialog .modal-body p {
       margin-bottom: 16px; }
-    .modal .modal-dialog .modal-body .login {
+    .modal .modal-dialog .modal-body .modal-form {
       width: 100%; }
-      .modal .modal-dialog .modal-body .login .form-control {
+      .modal .modal-dialog .modal-body .modal-form .form-control {
         margin-bottom: 16px;
         width: 100%; }
-      .modal .modal-dialog .modal-body .login .btn {
+      .modal .modal-dialog .modal-body .modal-form .btn {
         margin: 16px 0;
         width: 100%; }
-      .modal .modal-dialog .modal-body .login a {
+      .modal .modal-dialog .modal-body .modal-form a {
         display: block;
         text-align: right;
         font-weight: 500;

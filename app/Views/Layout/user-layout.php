@@ -126,13 +126,36 @@
 				<div class="modal-body">
 					<img src="<?= base_url('assets/img/logo.png') ?>" />
 					<p>Yuk Masuk Dulu!</p>
-					<form class="login">
+					<form class="modal-form">
 						<input class="form-control" type="text" placeholder="Masukan email atau nomor hp" />
 						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
 						<a href="#">Lupa Kata Sandi?</a>
 						<button class="btn btn-primary" type="submit">Masuk</button>
 					</form>
-					<span>Belum Memiliki Akun? <a href="#">Daftar akun sekarang</a></span>
+					<span>Belum Memiliki Akun? <a href="#" data-bs-target="#registerModal" data-bs-toggle="modal">Daftar akun sekarang</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="registerModal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+		        	<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<img src="<?= base_url('assets/img/logo.png') ?>" />
+					<p>Yuk Buat Akun Dulu!</p>
+					<form class="modal-form">
+						<input class="form-control" type="text" placeholder="Masukan email atau nomor hp" />
+						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
+						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
+						<input class="form-control" type="text" placeholder="Konfirmasi kata sandi" />
+						<a href="#">Lupa Kata Sandi?</a>
+						<button class="btn btn-primary" type="submit">Masuk</button>
+					</form>
+					<span>Sudah Memiliki Akun? <a href="#" data-bs-target="#loginModal" data-bs-toggle="modal">Masuk Sekarang</a></span>
 				</div>
 			</div>
 		</div>
