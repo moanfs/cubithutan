@@ -206,6 +206,40 @@ body {
 	}
 }
 
+.tour {
+	margin: 32px 0;
+	padding: 32px 0;
+	background-color: $purple-darker;
+	color: $white;
+
+	h1 {
+		text-align: center;
+		font-size: 2.25rem;
+	}
+
+	.row {
+		margin-top: 32px;
+
+		.card {
+			box-sizing: border-box;
+			margin: 8px;
+			background-color: $purple-darker;
+			color: $white;
+			border: 4px $white solid;
+			border-radius: 16px;
+
+			h2 {
+				margin-bottom: 8px;
+				font-size: 1.25rem;
+			}
+
+			.bi {
+				font-size: 4rem;
+			}
+		}
+	}
+}
+
 .footer {
 	background-color: $purple-darker;
 	color: $white;

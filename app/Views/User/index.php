@@ -93,6 +93,42 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="tour">
+		<div class="container">
+			<h1>Cara Konseling di Cubit Hutan</h1>
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<i class="bi bi-journal-bookmark-fill"></i>
+							<h2>1. Pilih Topik Permasalahan</h2>
+							<p>Cat ipsum dolor sit amet, snuggles up to shoulders or knees and purrs you to sleep. Stand with legs in litter box </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<i class="bi bi-send-fill"></i>
+							<h2>2. Hubungi Cubit Hutan</h2>
+							<p>Cat ipsum dolor sit amet, snuggles up to shoulders or knees and purrs you to sleep. Stand with legs in litter box </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<i class="bi bi-chat-left-quote-fill"></i>
+							<h2>3. Mulai Konsultasi</h2>
+							<p>Cat ipsum dolor sit amet, snuggles up to shoulders or knees and purrs you to sleep. Stand with legs in litter box </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 </main>
 
 <?= $this->endSection() ?>
