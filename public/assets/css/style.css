@@ -334,3 +334,16 @@ body {
       font-size: 1.75rem; }
     .about-page .about-team .member .profile {
       margin-top: 16px; }
+
+.contact-page {
+  margin: 32px 0; }
+  .contact-page h1 {
+    margin: 16px 0;
+    font-size: 2.25rem; }
+  .contact-page .contact-item {
+    margin: 8px 0;
+    display: flex;
+    align-items: center; }
+    .contact-page .contact-item .bi {
+      margin-right: 32px;
+      font-size: 1.75rem; }
