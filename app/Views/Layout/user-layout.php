@@ -49,9 +49,7 @@
 						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">
-							Kontak
-						</a>
+						<a class="nav-link" href="<?= site_url('kontak') ?>">Kontak</a>
 					</li>
 				</ul>
 

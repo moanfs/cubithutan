@@ -48,6 +48,8 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('podcast', 'Podcast::index');
 
     $routes->get('tentang-kami', 'About::index');
+
+    $routes->get('kontak', 'Contact::index');
 });
 /*
  * --------------------------------------------------------------------
