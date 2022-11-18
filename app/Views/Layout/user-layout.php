@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg">
+	<nav class="navbar navbar-expand-lg fixed-top">
 		<div class="container">
 			<a class="navbar-brand" href="<?= site_url('/') ?>">
 				<img src="<?= base_url('assets/img/logo.png') ?>" />
@@ -79,22 +79,30 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-3">
-					<a class="footer-link" href="#">Konseling Individual Online</a>
-					<a class="footer-link" href="#">Konseling Individual Offline</a>
-					<a class="footer-link" href="#">Curhat</a>
-					<a class="footer-link" href="#">Podcast</a>
+					<a class="footer-link" href="<?= site_url('konseling/online') ?>">Konseling Individual Online</a>
+					<a class="footer-link" href="<?= site_url('konseling/offline') ?>">Konseling Individual Offline</a>
+					<a class="footer-link" href="<?= site_url('curhat') ?>">Curhat</a>
+					<a class="footer-link" href="<?= site_url('podcast') ?>">Podcast</a>
 				</div>
 				<div class="col-12 col-md-2">
-					<a class="footer-link" href="#">Tentang Kami</a>
-					<a class="footer-link" href="#">Kontak</a>
+					<a class="footer-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
+					<a class="footer-link" href="<?= site_url('kontak') ?>">Kontak</a>
 				</div>
 				<div class="col-12 col-md-2">
 					<p>Media Sosial</p>
 					<div>
-						<i class="bi bi-instagram"></i>
-						<i class="bi bi-twitter"></i>
-						<i class="bi bi-whatsapp"></i>
-						<i class="bi bi-spotify"></i>
+						<a href="#">
+							<i class="bi bi-instagram"></i>
+						</a>
+						<a href="#">
+							<i class="bi bi-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="bi bi-whatsapp"></i>
+						</a>
+						<a href="#">
+							<i class="bi bi-spotify"></i>
+						</a>
 					</div>
 				</div>
 				<div class="col-12 col-md-5 order-md-first">

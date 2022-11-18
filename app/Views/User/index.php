@@ -8,16 +8,18 @@
 	<div class="container">
 		<div class="hero">
 			<div class="row">
-				<div class="col-12 col-md-6 hero-main">
-					<div>
-						<h1>Merasa Lebih Baik.</h1>
-						<p>Lorem ipsum dolor sit amet consectetur. Amet eget lorem rhoncus quam risus lectus sem aliquam. Augue phasellus facilisis platea porttitor. At eu at amet tellus sit eget eleifend et ut vitae.</p>
-						<button class="hero-cta">
-							Konseling
-							<i class="bi bi-whatsapp"></i>
-						</button>
+				<div class="col-12 col-md-6 bottom-space">
+					<div class="hero-main">
+						<div>
+							<h1>Merasa Lebih Baik.</h1>
+							<p>Lorem ipsum dolor sit amet consectetur. Amet eget lorem rhoncus quam risus lectus sem aliquam. Augue phasellus facilisis platea porttitor. At eu at amet tellus sit eget eleifend et ut vitae.</p>
+							<button class="hero-cta">
+								Konseling
+								<i class="bi bi-whatsapp"></i>
+							</button>
+						</div>
+						<img class="hero-img" src="<?= base_url('assets/img/hero.png') ?>" />
 					</div>
-					<img class="hero-img" src="<?= base_url('assets/img/hero.png') ?>" />
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="hero-side">

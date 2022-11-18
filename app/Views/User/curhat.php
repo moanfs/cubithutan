@@ -10,7 +10,7 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<div class="konseling-topics">
-						<p>Pilih Topik Curhat</p>
+						<p>Topik Curhat</p>
 						<div class="row">
 							<div class="col-3">
 								<a class="konseling-item" href="#">
