@@ -43,13 +43,9 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
         $routes->get('offline', 'Konseling::offline');
     });
 
-    $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
-        $routes->get('curhat', 'Curhat::index');
-    });
-
-    $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
-        $routes->get('podcast', 'Podcast::index');
-    });
+    $routes->get('curhat', 'Curhat::index');
+    
+    $routes->get('podcast', 'Podcast::index');
 });
 /*
  * --------------------------------------------------------------------

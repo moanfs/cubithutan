@@ -306,3 +306,16 @@ body {
       font-size: 1.5rem; }
     .konseling-page .konseling-tab .tab-content p {
       margin-bottom: 8px; }
+
+.podcast-page {
+  margin: 32px 0; }
+  .podcast-page h1 {
+    font-size: 2.25rem; }
+  .podcast-page p {
+    font-size: 1.25rem; }
+  .podcast-page .podcast-playlist {
+    margin-top: 32px; }
+    .podcast-page .podcast-playlist .podcast-episode {
+      margin: 4px 0;
+      width: 100%;
+      height: 232px; }

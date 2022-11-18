@@ -458,3 +458,22 @@ body {
 		}
 	}
 }
+
+.podcast-page {
+	margin: 32px 0;
+
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	p {
+		font-size: 1.25rem;
+	}
+
+	.podcast-playlist {
+		margin-top: 32px;
+		.podcast-episode {
+			@include podcast-item(232px);
+		}
+	}
+}
