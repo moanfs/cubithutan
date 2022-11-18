@@ -46,9 +46,7 @@
 						<a class="nav-link" href="<?= site_url('podcast') ?>">Podcast</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">
-							Tentang Kami
-						</a>
+						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link">

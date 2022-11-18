@@ -44,8 +44,10 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     });
 
     $routes->get('curhat', 'Curhat::index');
-    
+
     $routes->get('podcast', 'Podcast::index');
+
+    $routes->get('tentang-kami', 'About::index');
 });
 /*
  * --------------------------------------------------------------------
