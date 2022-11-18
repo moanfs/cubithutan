@@ -347,3 +347,14 @@ body {
     .contact-page .contact-item .bi {
       margin-right: 32px;
       font-size: 1.75rem; }
+
+.floating-button {
+  padding: 12px 19px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  background-color: #DDD8FF;
+  border-radius: 100%; }
+  .floating-button .bi {
+    color: #6C4AB6;
+    font-size: 1.75rem; }

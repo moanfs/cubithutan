@@ -140,7 +140,7 @@
 				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4owOYNFwxXICMQwrog9LNK?si=4004245b3ebc4ad2"></iframe>
 				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4iGrj9Dkttq86TkI1lvDOG?si=c7b83f7cb9094931"></iframe> -->
 			</div>
-			<a class="podcast-more" href="#">Lihat Semua Episode →</a>
+			<a class="podcast-more" href="<?= site_url('podcast') ?>">Lihat Semua Episode →</a>
 		</div>
 	</div>
 </main>

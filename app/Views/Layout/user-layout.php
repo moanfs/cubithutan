@@ -110,6 +110,14 @@
 		</div>
 	</footer>
 
+	<!-- wa chat -->
+
+	<div class="floating-button">
+		<a href="#">
+			<i class="bi bi-whatsapp"></i>
+		</a>
+	</div>
+
 	<!-- modal -->
 
 	<div class="modal" id="loginModal">

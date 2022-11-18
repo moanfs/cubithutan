@@ -523,3 +523,17 @@ body {
 		}
 	}
 }
+
+.floating-button {
+	padding: 12px 19px;
+	position: fixed;
+	right: 32px;
+	bottom: 32px;
+	background-color: $purple;
+	border-radius: 100%;
+
+	.bi {
+		color: $purple-darker;
+		font-size: 1.75rem;
+	}
+}
