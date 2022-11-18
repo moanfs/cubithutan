@@ -31,8 +31,12 @@
 							Peer Konseling
 						</a>
 						<ul class="dropdown-menu">
-							<li class="dropdown-item">Individual Online</li>
-							<li class="dropdown-item">Individual Offline</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="<?= site_url('konseling/online') ?>">Individual Online</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="<?= site_url('konseling/offline') ?>">Individual Offline</a>
+							</li>
 						</ul>
 					</li>
 					<li class="nav-item">
@@ -55,15 +59,14 @@
 							Kontak
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-							Test login
-						</a>
-					</li>
 				</ul>
 
 				<div class="navbar-right">
-					<img src="<?= base_url('assets/img/avatar.png') ?>" />
+					<!-- sebelum login -->
+					<button class="nav-button" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</button>
+
+					<!-- setelah login -->
+					<!-- <img src="<?= base_url('assets/img/avatar.png') ?>" />
 					<div class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
 							Malika
@@ -72,7 +75,7 @@
 							<li class="dropdown-item">Profil Saya</li>
 							<li class="dropdown-item">Keluar</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -152,7 +155,6 @@
 						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
 						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
 						<input class="form-control" type="text" placeholder="Konfirmasi kata sandi" />
-						<a href="#">Lupa Kata Sandi?</a>
 						<button class="btn btn-primary" type="submit">Masuk</button>
 					</form>
 					<span>Sudah Memiliki Akun? <a href="#" data-bs-target="#loginModal" data-bs-toggle="modal">Masuk Sekarang</a></span>

@@ -93,14 +93,28 @@ body {
 		img {
 			margin-right: 8px;
 		}
+
+		.nav-button {
+			padding: 4px 16px;
+			background-color: inherit;
+			color: $purple-darker;
+			font-family: 'Kanit', sans-serif;
+			font-size: 1.125rem;
+			font-weight: 500;
+			border: 2px $purple-darker solid;
+			border-radius: 12px;
+		}
 	}
 
-	.nav-link {
-		font-family: 'Kanit', sans-serif;
-		color: $dark;
+	.nav-item {
+		.nav-link {
+			font-family: 'Kanit', sans-serif;
+			font-size: 1.125rem;
+			color: $dark;
 
-		&:hover {
-			color: $purple;
+			&:hover {
+				color: $black;
+			}
 		}
 	}
 }
@@ -361,6 +375,85 @@ body {
 					color: $primary;
 					text-decoration: none;
 				}
+			}
+		}
+	}
+}
+
+.konseling-page {
+	margin: 32px 0;
+
+	.row {
+		.col-12 {
+			margin-bottom: 32px;
+		}
+
+		.konseling-topics {
+			padding: 32px;
+			background-color: $purple;
+			border-radius: 12px;
+
+			.row {
+				margin-top: 16px;
+
+				.konseling-item {
+					display: block;
+					margin-bottom: 8px;
+					color: inherit;
+					text-align: center;
+					text-decoration: none;
+
+					.bi {
+						color: $purple-darker;
+						font-size: 2.25rem;
+					}
+				}
+			}
+		}
+
+		.konseling-text {
+			h1 {
+				margin-bottom: 16px;
+				font-size: 2.25rem;
+			}
+
+			p {
+				text-align: justify;
+			}
+		}
+	}
+
+	.konseling-tab {
+		margin-bottom: 32px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.nav-pills {
+			margin-bottom: 32px;
+
+			.nav-link {
+				margin: 0 16px;
+				padding: 8px 32px;
+				border: 1px $dark solid;
+				border-radius: 24px;
+				color: $dark;
+			}
+
+			.active {
+				border: 1px $white solid;
+				color: $white;
+			}
+		}
+
+		.tab-content {
+			h2 {
+				margin-bottom: 8px;
+				font-size: 1.5rem;
+			}
+
+			p {
+				margin-bottom: 8px;
 			}
 		}
 	}
