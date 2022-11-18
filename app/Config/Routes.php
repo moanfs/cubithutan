@@ -42,6 +42,10 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
         $routes->get('online', 'Konseling::online');
         $routes->get('offline', 'Konseling::offline');
     });
+
+    $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
+        $routes->get('curhat', 'Curhat::index');
+    });
 });
 /*
  * --------------------------------------------------------------------

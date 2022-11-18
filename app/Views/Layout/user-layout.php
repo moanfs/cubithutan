@@ -40,9 +40,7 @@
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">
-							Curhat
-						</a>
+						<a class="nav-link" href="<?= site_url('curhat') ?>">Curhat</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link">
