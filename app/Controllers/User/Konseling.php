@@ -15,5 +15,3 @@ class Konseling extends BaseController
         return view('user/konseling-offline');
     }
 }
-
-?>

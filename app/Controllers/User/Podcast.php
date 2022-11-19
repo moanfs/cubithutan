@@ -11,5 +11,3 @@ class Podcast extends BaseController
         return view('user/podcast');
     }
 }
-
-?>

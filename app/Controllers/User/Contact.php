@@ -11,5 +11,3 @@ class Contact extends BaseController
         return view('user/kontak');
     }
 }
-
-?>

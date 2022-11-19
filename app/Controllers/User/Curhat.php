@@ -11,5 +11,3 @@ class Curhat extends BaseController
         return view('user/curhat');
     }
 }
-
-?>

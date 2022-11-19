@@ -11,5 +11,3 @@ class Dashboard extends BaseController
         return view('user/index');
     }
 }
-
-?>

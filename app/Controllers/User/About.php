@@ -11,5 +11,3 @@ class About extends BaseController
         return view('user/tentang-kami');
     }
 }
-
-?>
