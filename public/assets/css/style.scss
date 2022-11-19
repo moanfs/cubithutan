@@ -75,7 +75,7 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 body {
-	padding-top: 80px;
+	padding-top: 90px;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -139,10 +139,12 @@ body {
 
 			.hero-main {
 				display: flex;
+				min-height: 288px;
 				height: 100%;
 				align-items: center;
 				padding: 32px;
-				background-color: $purple-darker;
+				// background-color: $purple-darker;
+				background: $purple-darker url("../img/hero-poster.jpg");
 				color: $white;
 				border-radius: 12px;
 				box-shadow: $shadow;

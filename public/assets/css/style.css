@@ -2,7 +2,7 @@ p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0; }
 
 body {
-  padding-top: 80px;
+  padding-top: 90px;
   font-family: 'Roboto', sans-serif; }
 
 .navbar {
@@ -43,10 +43,11 @@ body {
       margin-bottom: 8px; }
       .hero .row .bottom-space .hero-main {
         display: flex;
+        min-height: 288px;
         height: 100%;
         align-items: center;
         padding: 32px;
-        background-color: #6C4AB6;
+        background: #6C4AB6 url("../img/hero-poster.jpg");
         color: #FFFFFF;
         border-radius: 12px;
         box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.25); }
