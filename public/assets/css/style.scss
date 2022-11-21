@@ -143,8 +143,8 @@ body {
 				height: 100%;
 				align-items: center;
 				padding: 32px;
-				// background-color: $purple-darker;
-				background: $purple-darker url("../img/hero-poster.jpg");
+				background-color: $purple-darker;
+				// background: $purple-darker url("../img/hero-poster.jpg");
 				color: $white;
 				border-radius: 12px;
 				box-shadow: $shadow;
@@ -361,7 +361,7 @@ body {
 
 .modal {
 	.modal-dialog {
-		width: fit-content;
+		// width: fit-content;
 
 		.modal-body {
 			display: flex;
@@ -370,7 +370,7 @@ body {
 			align-items: center;
 
 			img {
-				margin-bottom: 16px;
+				margin: 16px 0;
 			}
 
 			p {
@@ -400,7 +400,7 @@ body {
 			}
 
 			span {
-				margin: 8px 16px;
+				margin: 8px;
 				
 				a {
 					font-weight: 500;

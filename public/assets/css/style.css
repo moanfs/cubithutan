@@ -47,7 +47,7 @@ body {
         height: 100%;
         align-items: center;
         padding: 32px;
-        background: #6C4AB6 url("../img/hero-poster.jpg");
+        background-color: #6C4AB6;
         color: #FFFFFF;
         border-radius: 12px;
         box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.25); }
@@ -247,37 +247,35 @@ body {
         .footer .row .col-12 a .bi {
           font-size: 1.5rem; }
 
-.modal .modal-dialog {
-  width: fit-content; }
-  .modal .modal-dialog .modal-body {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    align-items: center; }
-    .modal .modal-dialog .modal-body img {
-      margin-bottom: 16px; }
-    .modal .modal-dialog .modal-body p {
-      margin-bottom: 16px; }
-    .modal .modal-dialog .modal-body .modal-form {
+.modal .modal-dialog .modal-body {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  align-items: center; }
+  .modal .modal-dialog .modal-body img {
+    margin: 16px 0; }
+  .modal .modal-dialog .modal-body p {
+    margin-bottom: 16px; }
+  .modal .modal-dialog .modal-body .modal-form {
+    width: 100%; }
+    .modal .modal-dialog .modal-body .modal-form .form-control {
+      margin-bottom: 16px;
       width: 100%; }
-      .modal .modal-dialog .modal-body .modal-form .form-control {
-        margin-bottom: 16px;
-        width: 100%; }
-      .modal .modal-dialog .modal-body .modal-form .btn {
-        margin: 16px 0;
-        width: 100%; }
-      .modal .modal-dialog .modal-body .modal-form a {
-        display: block;
-        text-align: right;
-        font-weight: 500;
-        color: #0275D8;
-        text-decoration: none; }
-    .modal .modal-dialog .modal-body span {
-      margin: 8px 16px; }
-      .modal .modal-dialog .modal-body span a {
-        font-weight: 500;
-        color: #0275D8;
-        text-decoration: none; }
+    .modal .modal-dialog .modal-body .modal-form .btn {
+      margin: 16px 0;
+      width: 100%; }
+    .modal .modal-dialog .modal-body .modal-form a {
+      display: block;
+      text-align: right;
+      font-weight: 500;
+      color: #0275D8;
+      text-decoration: none; }
+  .modal .modal-dialog .modal-body span {
+    margin: 8px; }
+    .modal .modal-dialog .modal-body span a {
+      font-weight: 500;
+      color: #0275D8;
+      text-decoration: none; }
 
 .konseling-page {
   margin: 32px 0; }
