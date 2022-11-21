@@ -50,6 +50,8 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('tentang-kami', 'About::index');
 
     $routes->get('kontak', 'Contact::index');
+
+    $routes->get('profile', 'Profile::index');
 });
 /*
  * --------------------------------------------------------------------
