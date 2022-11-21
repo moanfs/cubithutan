@@ -364,6 +364,31 @@ body {
       margin-right: 32px;
       font-size: 1.75rem; }
 
+.profile-page {
+  margin: 32px 0; }
+  .profile-page .card {
+    margin: 8px 8px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); }
+    .profile-page .card .profile-img {
+      display: flex;
+      justify-content: center; }
+      .profile-page .card .profile-img img {
+        margin: 48px 16px; }
+    .profile-page .card .card-body .col-12 {
+      margin: 4px 0; }
+      .profile-page .card .card-body .col-12 .label {
+        font-weight: 600; }
+      .profile-page .card .card-body .col-12 a {
+        margin-left: 16px;
+        color: #0275D8;
+        font-weight: 600;
+        text-decoration: none; }
+        .profile-page .card .card-body .col-12 a:hover {
+          text-decoration: underline; }
+      .profile-page .card .card-body .col-12 .btn {
+        padding: 4px 24px; }
+
 .floating-button {
   padding: 12px 19px;
   position: fixed;
