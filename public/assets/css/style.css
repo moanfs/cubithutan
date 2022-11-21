@@ -247,35 +247,63 @@ body {
         .footer .row .col-12 a .bi {
           font-size: 1.5rem; }
 
-.modal .modal-dialog .modal-body {
+.modal-log .modal-dialog .modal-body {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   align-items: center; }
-  .modal .modal-dialog .modal-body img {
+  .modal-log .modal-dialog .modal-body img {
     margin: 16px 0; }
-  .modal .modal-dialog .modal-body p {
+  .modal-log .modal-dialog .modal-body p {
     margin-bottom: 16px; }
-  .modal .modal-dialog .modal-body .modal-form {
+  .modal-log .modal-dialog .modal-body .modal-form {
     width: 100%; }
-    .modal .modal-dialog .modal-body .modal-form .form-control {
+    .modal-log .modal-dialog .modal-body .modal-form .form-control {
       margin-bottom: 16px;
       width: 100%; }
-    .modal .modal-dialog .modal-body .modal-form .btn {
+    .modal-log .modal-dialog .modal-body .modal-form .btn {
       margin: 16px 0;
       width: 100%; }
-    .modal .modal-dialog .modal-body .modal-form a {
+    .modal-log .modal-dialog .modal-body .modal-form a {
       display: block;
       text-align: right;
       font-weight: 500;
       color: #0275D8;
       text-decoration: none; }
-  .modal .modal-dialog .modal-body span {
+  .modal-log .modal-dialog .modal-body span {
     margin: 8px; }
-    .modal .modal-dialog .modal-body span a {
+    .modal-log .modal-dialog .modal-body span a {
       font-weight: 500;
       color: #0275D8;
       text-decoration: none; }
+
+.modal-profile .modal-dialog .modal-body .card {
+  margin: 8px 0;
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); }
+  .modal-profile .modal-dialog .modal-body .card .profile-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .modal-profile .modal-dialog .modal-body .card .profile-img img {
+      margin: 32px 16px; }
+    .modal-profile .modal-dialog .modal-body .card .profile-img p {
+      color: #6D757D; }
+
+.modal-profile .modal-dialog .modal-body .modal-form {
+  padding: 8px; }
+  .modal-profile .modal-dialog .modal-body .modal-form h1 {
+    font-size: 1.25rem;
+    margin-bottom: 16px; }
+  .modal-profile .modal-dialog .modal-body .modal-form form .form-control {
+    margin-bottom: 16px; }
+  .modal-profile .modal-dialog .modal-body .modal-form form .form-button {
+    display: flex;
+    justify-content: end; }
+    .modal-profile .modal-dialog .modal-body .modal-form form .form-button .btn {
+      margin: 0 8px;
+      padding: 4px 24px; }
 
 .konseling-page {
   margin: 32px 0; }
@@ -367,7 +395,7 @@ body {
 .profile-page {
   margin: 32px 0; }
   .profile-page .card {
-    margin: 8px 8px;
+    margin: 8px;
     border-radius: 12px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); }
     .profile-page .card .profile-img {
@@ -386,8 +414,8 @@ body {
         text-decoration: none; }
         .profile-page .card .card-body .col-12 a:hover {
           text-decoration: underline; }
-      .profile-page .card .card-body .col-12 .btn {
-        padding: 4px 24px; }
+    .profile-page .card .card-body .btn {
+      padding: 4px 24px; }
 
 .floating-button {
   padding: 12px 19px;

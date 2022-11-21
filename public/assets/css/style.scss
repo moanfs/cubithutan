@@ -14,6 +14,7 @@ $primary: #0275D8;
 $success: #5CB85C;
 $info: #5BC0DE;
 $warning: #F0AD4E;
+$muted: #6D757D; 
 
 // breakpoint
 $sm: 576px;
@@ -359,7 +360,7 @@ body {
 	}
 }
 
-.modal {
+.modal-log {
 	.modal-dialog {
 		// width: fit-content;
 
@@ -406,6 +407,58 @@ body {
 					font-weight: 500;
 					color: $primary;
 					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.modal-profile {
+	.modal-dialog {
+		.modal-body {
+			.card {
+				margin: 8px 0;
+				border-radius: 12px;
+				box-shadow: $shadow-sm;
+
+				.profile-img {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+
+					img {
+						margin: 32px 16px;
+					}
+
+					p {
+						color: $muted;
+					}
+				}
+			}
+
+			.modal-form {
+				padding: 8px;
+
+				h1 {
+					font-size: 1.25rem;
+					margin-bottom: 16px;
+				}
+
+				form {
+					.form-control {
+						margin-bottom: 16px;
+					}
+
+					.form-button {
+						display: flex;
+						justify-content: end;
+
+						.btn {
+							margin: 0 8px;
+							padding: 4px 24px;
+						}
+					}
 				}
 			}
 		}
@@ -560,7 +613,7 @@ body {
 	margin: 32px 0;
 
 	.card {
-		margin: 8px 8px;
+		margin: 8px;
 		border-radius: 12px;
 		box-shadow: $shadow-sm;
 
@@ -591,10 +644,10 @@ body {
 						text-decoration: underline;
 					}
 				}
+			}
 
 			.btn {
 				padding: 4px 24px;
-				}
 			}
 		}
 	}

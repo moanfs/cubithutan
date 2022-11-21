@@ -128,7 +128,7 @@
 
 	<!-- modal -->
 
-	<div class="modal" id="loginModal">
+	<div class="modal modal-log" id="loginModal">
 		<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -149,7 +149,7 @@
 		</div>
 	</div>
 
-	<div class="modal" id="registerModal">
+	<div class="modal modal-log" id="registerModal">
 		<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
 			<div class="modal-content">
 				<div class="modal-header">
