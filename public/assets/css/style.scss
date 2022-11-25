@@ -563,6 +563,29 @@ body {
 	}
 }
 
+.materi-page {
+	margin: 32px 0;
+
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	.materi-poster {
+		margin-top: 32px;
+		margin-left: -16px;
+		margin-right: -16px;
+		display: flex;
+		flex-wrap: wrap;
+
+		img {
+			margin: 16px;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
 .about-page {
 	margin: 32px 0;
 

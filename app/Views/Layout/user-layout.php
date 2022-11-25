@@ -46,6 +46,9 @@
 						<a class="nav-link" href="<?= site_url('podcast') ?>">Podcast</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="<?= site_url('materi') ?>">Materi</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
 					</li>
 					<li class="nav-item">
@@ -83,6 +86,7 @@
 					<a class="footer-link" href="<?= site_url('konseling/offline') ?>">Konseling Individual Offline</a>
 					<a class="footer-link" href="<?= site_url('curhat') ?>">Curhat</a>
 					<a class="footer-link" href="<?= site_url('podcast') ?>">Podcast</a>
+					<a class="footer-link" href="<?= site_url('materi') ?>">Materi</a>
 				</div>
 				<div class="col-12 col-md-2">
 					<a class="footer-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
