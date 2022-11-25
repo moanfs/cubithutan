@@ -35,6 +35,11 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// --------------------------------------------------------------------
+// Route User
+// --------------------------------------------------------------------
+
 $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('/', 'Dashboard::index');
 
@@ -53,6 +58,15 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
 
     $routes->get('profile', 'Profile::index');
 });
+
+// --------------------------------------------------------------------
+// Route Admin
+// --------------------------------------------------------------------
+
+$routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+    $routes->get('/', 'Dashboard::index');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
