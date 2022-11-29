@@ -1,4 +1,4 @@
-<!-- halaman index admin -->
+<!-- halaman profile admin -->
 
 <?= $this->extend('layout/admin-layout') ?>
 

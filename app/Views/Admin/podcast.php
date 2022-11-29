@@ -1,4 +1,4 @@
-<!-- halaman index admin -->
+<!-- halaman podcast admin -->
 
 <?= $this->extend('layout/admin-layout') ?>
 
