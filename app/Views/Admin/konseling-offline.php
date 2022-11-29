@@ -1,4 +1,4 @@
-<!-- halaman index admin -->
+<!-- halaman konseling offline admin -->
 
 <?= $this->extend('layout/admin-layout') ?>
 
@@ -8,7 +8,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+    <h1 class="h3 mb-4 text-gray-800">Konseling offline</h1>
 
 </div>
 <!-- /.container-fluid -->

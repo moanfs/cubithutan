@@ -67,6 +67,19 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
 
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
     $routes->get('/', 'Dashboard::index');
+
+    $routes->group('konseling', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+        $routes->get('online', 'Konseling::online');
+        $routes->get('offline', 'Konseling::offline');
+    });
+
+    $routes->get('curhat', 'Curhat::index');
+
+    $routes->get('podcast', 'Podcast::index');
+
+    $routes->get('materi', 'Materi::index');
+
+    $routes->get('profile', 'Profile::index');
 });
 
 /*
