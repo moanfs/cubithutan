@@ -91,7 +91,7 @@
 
 			<!-- Nav Item - Keluar -->
 			<li class="nav-item">
-				<a class="nav-link" href="<?= site_url('/') ?>">
+				<a class="nav-link" href="#"  data-toggle="modal" data-target="#logoutModal">
 					<i class="fas fa-sign-out-alt"></i>
 					<span>Keluar</span>
 				</a>
