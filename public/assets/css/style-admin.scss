@@ -1,0 +1,76 @@
+.profile-page {
+	.card {
+		.profile-img {
+			display: flex;
+			justify-content: center;
+
+			img {
+				margin: 48px 16px;
+			}
+		}
+
+		.card-body {
+			.col-12 {
+				margin: 4px 0;
+
+				a {
+					margin-left: 16px;
+					font-weight: 600;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.btn {
+				padding: 4px 24px;
+			}
+		}
+	}
+}
+
+.modal-profile {
+	.modal-dialog {
+		.modal-body {
+			.card {
+				.profile-img {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+
+					img {
+						margin: 32px 16px;
+					}
+				}
+			}
+
+			.modal-form {
+				padding: 8px;
+
+				h1 {
+					font-size: 1.25rem;
+					margin-bottom: 16px;
+				}
+
+				form {
+					.form-control {
+						margin-bottom: 16px;
+					}
+
+					.form-button {
+						display: flex;
+						justify-content: end;
+
+						.btn {
+							margin: 0 8px;
+							padding: 4px 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
