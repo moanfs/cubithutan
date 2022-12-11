@@ -39,6 +39,8 @@ $routes->set404Override();
 // --------------------------------------------------------------------
 // Route User
 // --------------------------------------------------------------------
+$routes->post('auth', 'Auth::attemptLogin');
+$routes->get('logout', 'Auth::logout');
 
 $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('/', 'Dashboard::index');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +12,9 @@
 	<!-- google font kanit roboto -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 	<nav class="navbar navbar-expand-lg fixed-top">
 		<div class="container">
@@ -57,20 +59,26 @@
 				</ul>
 
 				<div class="navbar-right">
-					<!-- sebelum login -->
-					<button class="nav-button" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</button>
-
-					<!-- setelah login -->
-					<!-- <img src="<?= base_url('assets/img/avatar.png') ?>" />
-					<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Malika
-						</a>
-						<ul class="dropdown-menu">
-							<li class="dropdown-item">Profil Saya</li>
-							<li class="dropdown-item">Keluar</li>
-						</ul>
-					</div> -->
+					<?php if (!session('id')) : ?>
+						<!-- sebelum login -->
+						<button class="nav-button" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</button>
+					<?php else : ?>
+						<!-- setelah login -->
+						<img src="<?= base_url('assets/img/avatar.png') ?>" />
+						<div class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+								Malika
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-item">
+									<a class="nav-link" href="<?= site_url(); ?>">Profil Saya</a>
+								</li>
+								<li class="dropdown-item">
+									<a class="nav-link" href="<?= site_url('logout'); ?>">Logout</a>
+								</li>
+							</ul>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -87,6 +95,7 @@
 					<a class="footer-link" href="<?= site_url('curhat') ?>">Curhat</a>
 					<a class="footer-link" href="<?= site_url('podcast') ?>">Podcast</a>
 					<a class="footer-link" href="<?= site_url('materi') ?>">Materi</a>
+
 				</div>
 				<div class="col-12 col-md-2">
 					<a class="footer-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
@@ -111,6 +120,7 @@
 				</div>
 				<div class="col-12 col-md-5 order-md-first">
 					<p>
+						<a href="https://saweria.co/widgets/qr?streamKey=d52ff0c7726d9a97ab18553e0cd5767e">asaasaa</a>
 						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
 					</p>
 					<div class="footer-img">
@@ -136,16 +146,18 @@
 		<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
 			<div class="modal-content">
 				<div class="modal-header">
-		        	<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
 					<img src="<?= base_url('assets/img/logo.png') ?>" />
 					<p>Yuk Masuk Dulu!</p>
-					<form class="modal-form">
-						<input class="form-control" type="text" placeholder="Masukan email atau nomor hp" />
-						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
+					<form class="modal-form" action="<?= site_url('auth'); ?>" method="post">
+						<?= csrf_field() ?>
+						<input class="form-control" type="text" name="email" placeholder="Masukan email atau nomor hp" />
+						<input class="form-control" type="password" name="pass_hash" placeholder="Masukan kata sandi" />
 						<a href="#">Lupa Kata Sandi?</a>
 						<button class="btn btn-primary" type="submit">Masuk</button>
+
 					</form>
 					<span>Belum Memiliki Akun? <a href="#" data-bs-target="#registerModal" data-bs-toggle="modal">Daftar akun sekarang</a></span>
 				</div>
@@ -157,16 +169,17 @@
 		<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
 			<div class="modal-content">
 				<div class="modal-header">
-		        	<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
 					<img src="<?= base_url('assets/img/logo.png') ?>" />
 					<p>Yuk Buat Akun Dulu!</p>
-					<form class="modal-form">
-						<input class="form-control" type="text" placeholder="Masukan email atau nomor hp" />
-						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
-						<input class="form-control" type="text" placeholder="Masukan kata sandi" />
-						<input class="form-control" type="text" placeholder="Konfirmasi kata sandi" />
+					<form class="modal-form" action="<?= site_url('register'); ?>" method="post">
+						<input class="form-control" name="email" type="text" placeholder="Masukan email" />
+						<input class="form-control" name="first_name" type="text" placeholder="Nama Depan" />
+						<input class="form-control" name="last_name" type="text" placeholder="Nama Keluarga" />
+						<input class="form-control" name="pass_hash" type="text" placeholder="Masukan kata sandi" />
+						<input class="form-control" name="pass_confirm" type="text" placeholder="Konfirmasi kata sandi" />
 						<button class="btn btn-primary" type="submit">Masuk</button>
 					</form>
 					<span>Sudah Memiliki Akun? <a href="#" data-bs-target="#loginModal" data-bs-toggle="modal">Masuk Sekarang</a></span>
@@ -179,4 +192,5 @@
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 </body>
+
 </html>

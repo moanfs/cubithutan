@@ -35,7 +35,7 @@ abstract class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['form'];
 
     /**
      * The data to be passed to the view.
@@ -54,6 +54,7 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
-
+        $this->session = \Config\Services::session();
+        $this->db          = \Config\Database::connect();
     }
 }

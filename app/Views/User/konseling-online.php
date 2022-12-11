@@ -90,8 +90,7 @@
 				<div class="col-12 col-md-6">
 					<div class="konseling-text">
 						<h1>Konseling Individual Online</h1>
-						<p>Lorem ipsum dolor sit amet consectetur. Id massa amet egestas scelerisque. Aliquet purus odio aliquet neque arcu ullamcorper ipsum. Tellus arcu posuere quis faucibus a egestas cursus enim euismod. Volutpat sit nec nulla est tincidunt habitant orci praesent. Lobortis senectus cras in tincidunt aliquam faucibus elementum aliquam. Sed non egestas nec sem ornare viverra pharetra a. Imperdiet lectus sit eget id. Ultricies purus sed hendrerit a volutpat est dui mauris.</p>
-						<p>Sit id turpis suspendisse convallis feugiat at porttitor. Nulla at enim pharetra habitant consequat nunc.</p>
+						<p>Kegiatan pelayanan konseling yang dilakukan dengan pemanfaatan media internet baik secara langsung maupun tidak langsung, dimana layanan konselingnya bisa dilakukan melalui website atau situs resmi konseling online.</p>
 					</div>
 				</div>
 			</div>
@@ -105,17 +104,24 @@
 					</li>
 				</ul>
 				<div class="tab-content" id="pillsContent">
-					<div class="tab-pane show active" id="tujuan" tabindex="0">
+					<div class="tab-pane show active col-6" id="tujuan" tabindex="0">
 						<h2>Tujuan Dari Konseling Individual Online</h2>
-						<p>Ketika anda merasa bahwa hidup ini tidak lagi tenang secara emosional:</p>
+						<p>Membantu mengatasi permasalahan yang dimikili konseli secara online. Konseling online ini dinilai Praktis, sehingga dapat mengurangi potensi hambatan yang dapat membuat konseling dibatalkan. Tidak menghabiskan waktu untuk perjalanan. Secara umum lebih murah ketimbang konseling tatap muka. Terhindar dari potensi rasa takut bertemu dengan kerabat/kenalan saat di lokasi konseling. Adanya konseling online juga merupakan salah satu harapan bagi konseli yang masih cemas dengan pelabelan dari masyarakat. Dengan konseling online maka individu tersebut tidak perlu takut akan stigma orang sekitar karena proses konseling dilakukan melalui media </p>
+
+					</div>
+					<div class="tab-pane" id="pertanyaan" tabindex="0">
 						<ul>
-							<li>Mudah gelisah</li>
-							<li>Marah berlebihan</li>
-							<li>Sering mimpi buruk</li>
-							<li>Ketakutan yang berlebihan</li>
+							<li>1. Percintaan</li>
+							<li>2. Kecemasan</li>
+							<li>3. Stress</li>
+							<li>4. Hopelessness</li>
+							<li>5. Karir</li>
+							<li>6. Prospek kerja</li>
+							<li>7. Pemilihan jurusan kuliah</li>
+							<li>8. Pemilihan jurusan pekerjaan</li>
 						</ul>
 					</div>
-					<div class="tab-pane" id="pertanyaan" tabindex="0">b</div>
+
 				</div>
 			</div>
 		</div>

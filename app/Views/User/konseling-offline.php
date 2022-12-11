@@ -90,8 +90,7 @@
 				<div class="col-12 col-md-6">
 					<div class="konseling-text">
 						<h1>Konseling Individual Offline</h1>
-						<p>Lorem ipsum dolor sit amet consectetur. Id massa amet egestas scelerisque. Aliquet purus odio aliquet neque arcu ullamcorper ipsum. Tellus arcu posuere quis faucibus a egestas cursus enim euismod. Volutpat sit nec nulla est tincidunt habitant orci praesent. Lobortis senectus cras in tincidunt aliquam faucibus elementum aliquam. Sed non egestas nec sem ornare viverra pharetra a. Imperdiet lectus sit eget id. Ultricies purus sed hendrerit a volutpat est dui mauris.</p>
-						<p>Sit id turpis suspendisse convallis feugiat at porttitor. Nulla at enim pharetra habitant consequat nunc.</p>
+						<p>Fitur konseling offline dalam website CuBit HuTan digunakan bagi konseli yang memang menginginkan konseling secara langsung dan tatap muka, didukung oleh jarak konseli dan konselor yang berdekatan sehingga bisa dilakukan konseling secara offline. Konseling offline ini harus persetujuan antara konseli dan konselor terkait apakah keduanya sanggup untuk melakukan konseling secara offline. </p>
 					</div>
 				</div>
 			</div>
@@ -107,15 +106,21 @@
 				<div class="tab-content" id="pillsContent">
 					<div class="tab-pane show active" id="tujuan" tabindex="0">
 						<h2>Tujuan Dari Konseling Individual Offline</h2>
-						<p>Ketika anda merasa bahwa hidup ini tidak lagi tenang secara emosional:</p>
+						<p>Konseling Offline bertujuan untuk melaksanakan konseling secara lebih nyaman dan tanpa terganggu oleh kondisi sinyal sehingga membuat proses konseling berjalan lebih nyaman dan lancar. Dan setiap orang memiliki keinginan atau kenyamanan yang berbeda, ada yang nyaman secara langsung tatap muka maka pilihan layanan konseling offline ini cocok dan sangat berguna. </p>
+
+					</div>
+					<div class="tab-pane" id="pertanyaan" tabindex="0">
 						<ul>
-							<li>Mudah gelisah</li>
-							<li>Marah berlebihan</li>
-							<li>Sering mimpi buruk</li>
-							<li>Ketakutan yang berlebihan</li>
+							<li>1. Percintaan</li>
+							<li>2. Kecemasan</li>
+							<li>3. Stress</li>
+							<li>4. Hopelessness</li>
+							<li>5. Karir</li>
+							<li>6. Prospek kerja</li>
+							<li>7. Pemilihan jurusan kuliah</li>
+							<li>8. Pemilihan jurusan pekerjaan</li>
 						</ul>
 					</div>
-					<div class="tab-pane" id="pertanyaan" tabindex="0">b</div>
 				</div>
 			</div>
 		</div>

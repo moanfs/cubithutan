@@ -24,8 +24,8 @@
 				<div class="col-12 col-md-6">
 					<div class="konseling-text">
 						<h1>Curhat Cubit Hutan</h1>
-						<p>Lorem ipsum dolor sit amet consectetur. Id massa amet egestas scelerisque. Aliquet purus odio aliquet neque arcu ullamcorper ipsum. Tellus arcu posuere quis faucibus a egestas cursus enim euismod. Volutpat sit nec nulla est tincidunt habitant orci praesent. Lobortis senectus cras in tincidunt aliquam faucibus elementum aliquam. Sed non egestas nec sem ornare viverra pharetra a. Imperdiet lectus sit eget id. Ultricies purus sed hendrerit a volutpat est dui mauris.</p>
-						<p>Sit id turpis suspendisse convallis feugiat at porttitor. Nulla at enim pharetra habitant consequat nunc.</p>
+						<p>Fitur curhat yang tersedia dalam website CuBit HuTan ini digunakan untuk para pengguna yang ingin curhat atau menceritakan permasalahan yang dialaminya secara gratis. Bagi pengguna yang ingin mencurahkan masalahnya, fitur curhat disini sesuai keinginan pengguna atau konseli apakah curhatan mereka ingin kami beri tanggapan atau hanya ingin didengar saja, itu kembali kepada keinginan pengguna.</p>
+						<!-- <p>Sit id turpis suspendisse convallis feugiat at porttitor. Nulla at enim pharetra habitant consequat nunc.</p> -->
 					</div>
 				</div>
 			</div>

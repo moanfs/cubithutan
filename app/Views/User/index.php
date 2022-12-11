@@ -67,14 +67,14 @@
 				<div class="card-body">
 					<h3 class="peer-konseling">Peer Konseling</h3>
 					<ul>
+						<li>Membantu permasalahan klinis </li>
+						<p>(contoh: anxiety) dan juga masalah karir.</p>
+						<li>Memberikan action plan atau solusi.</li>
+						<!-- <p>2. Memberikan action plan atau solusi.</p> -->
+						<li>Memberikan diagnosis.</li>
+						<!-- <p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
 						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
+						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p> -->
 					</ul>
 				</div>
 			</div>
@@ -82,14 +82,14 @@
 				<div class="card-body">
 					<h3 class="curhat">Curhat</h3>
 					<ul>
-						<li>Lorem ipsum</li>
+						<li>Fokus membantu permasalahan percintaan.</li>
+						<!-- <p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p> -->
+						<li>Dapat memberikan action plan/solusi dan juga tidak dapat memberikan action plan (tergantung klien hanya mau didengar atau membutuhkan saran juga).</li>
 						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
+						<li>Tidak memberikan diagnosis.</li>
+						<!-- <p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
 						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-						<li>Lorem ipsum</li>
-						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
+						<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p> -->
 					</ul>
 				</div>
 			</div>
