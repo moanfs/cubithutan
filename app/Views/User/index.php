@@ -12,7 +12,7 @@
 					<div class="hero-main">
 						<div>
 							<h1>Merasa Lebih Baik.</h1>
-							<p>Lorem ipsum dolor sit amet consectetur. Amet eget lorem rhoncus quam risus lectus sem aliquam. Augue phasellus facilisis platea porttitor. At eu at amet tellus sit eget eleifend et ut vitae.</p>
+							<p>CuBiT HuTan memberikan ruang kepada setiap orang untuk mencurahkan isi hati tentang masalah percintaan dan juga memberikan kemudahan kepada setiap orang untuk menemukan jalan keluar dari setiap permasalahan yang sedang dihadapi, baik masalah pribadi maupun masalah karir.</p>
 							<button class="hero-cta">
 								<a href="https://wa.me/6283113895059?text=Hii%20Saya%20ingin%20curhat%20dengan%20cubit%20hutan" target="_blank" rel="noopener">Konseling</a>
 								<i class="bi bi-whatsapp"></i>

@@ -35,7 +35,7 @@ abstract class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ['form'];
+    protected $helpers = ['form', 'my_helper'];
 
     /**
      * The data to be passed to the view.

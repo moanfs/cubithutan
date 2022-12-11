@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Filters\AdminFilter;
+use App\Filters\LoginFilter;
 use App\Filters\RolerFilter;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
@@ -24,7 +26,9 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'roleFilter'    => RolerFilter::class
+        'roleFilter'    => RolerFilter::class,
+        'loginFilter'   => LoginFilter::class,
+        'adminFilter'   => AdminFilter::class
     ];
 
     /**
@@ -71,6 +75,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $filters = [
-        'roleFilter' => ['before' => ['admin', 'admin/*']]
+        'loginFilter'   => ['before' => ['admin', 'admin/*']],
+        'roleFilter'    => ['before' => ['admin', 'admin/*']]
     ];
 }

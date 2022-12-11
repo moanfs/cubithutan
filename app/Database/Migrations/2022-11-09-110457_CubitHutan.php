@@ -13,9 +13,15 @@ class CubitHutan extends Migration
          */
         $this->forge->addField([
             'id'                => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true,],
-            'username'          => ['type' => 'VARCHAR', 'constraint' => 125, 'constraint' => '100'],
+            'username'          => ['type' => 'VARCHAR', 'constraint' => 125, 'null' => true],
+            'first_name'        => ['type' => 'VARCHAR', 'constraint' => 125],
+            'last_name'         => ['type' => 'VARCHAR', 'constraint' => 125],
             'email'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'phone'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'tempat_lahir'     => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'tanggal_lahir'     => ['type' => 'date', 'null' => true],
+            'jenis_klamin'      => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'alamat'            => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'pass_hash'         => ['type' => 'varchar', 'constraint' => 125,],
             'img_profile'       => ['type' => 'varchar', 'constraint' => 125, 'default' => 'profile.png'],
             'active'            => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
@@ -53,6 +59,7 @@ class CubitHutan extends Migration
             'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
             'name'              => ['type' => 'varchar', 'constraint' => 125],
             'layout'            => ['type' => 'varchar', 'constraint' => 225],
+            'type'              => ['type' => 'int', 'constraint' => 11],
             'created_at'        => ['type' => 'datetime', 'null' => true],
             'updated_at'        => ['type' => 'datetime', 'null' => true],
             'deleted_at'        => ['type' => 'datetime', 'null' => true],
@@ -60,6 +67,55 @@ class CubitHutan extends Migration
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('layout', true);
+
+        $this->forge->addField([
+            'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name'              => ['type' => 'varchar', 'constraint' => 125],
+            'img'               => ['type' => 'varchar', 'constraint' => 225],
+            'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
+            'created_at'        => ['type' => 'datetime', 'null' => true],
+            'updated_at'        => ['type' => 'datetime', 'null' => true],
+            'deleted_at'        => ['type' => 'datetime', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('materi', true);
+
+        $this->forge->addField([
+            'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name'              => ['type' => 'varchar', 'constraint' => 125],
+            'link'              => ['type' => 'varchar', 'constraint' => 225],
+            'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
+            'created_at'        => ['type' => 'datetime', 'null' => true],
+            'updated_at'        => ['type' => 'datetime', 'null' => true],
+            'deleted_at'        => ['type' => 'datetime', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('podcast', true);
+
+        $this->forge->addField([
+            'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name'              => ['type' => 'varchar', 'constraint' => 125],
+            'icon'              => ['type' => 'varchar', 'constraint' => 225],
+            'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
+            'created_at'        => ['type' => 'datetime', 'null' => true],
+            'updated_at'        => ['type' => 'datetime', 'null' => true],
+            'deleted_at'        => ['type' => 'datetime', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+
+        $this->forge->createTable('curhat', true);
+        $this->forge->addField([
+            'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name'              => ['type' => 'varchar', 'constraint' => 125],
+            'icon'              => ['type' => 'varchar', 'constraint' => 225],
+            'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
+            'type'              => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
+            'created_at'        => ['type' => 'datetime', 'null' => true],
+            'updated_at'        => ['type' => 'datetime', 'null' => true],
+            'deleted_at'        => ['type' => 'datetime', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('konseling', true);
     }
 
     public function down()

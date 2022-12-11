@@ -23,17 +23,17 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="text-gray-900">Nama Panggilan</p>
+                            <p class="text-gray-900">Nama Lengkap</p>
                         </div>
                         <div class="col-12 col-md-8">
-                            <p>Malika</p>
+                            <p><?= $profile['first_name']; ?> <?= $profile['last_name']; ?></p>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <p class="text-gray-900">Email</p>
                         </div>
                         <div class="col-12 col-md-8">
-                            <span>malika@gmail.com</span>
+                            <span><?= $profile['email']; ?></span>
                             <span>
                                 <a href="#">Ganti email</a>
                             </span>
@@ -53,28 +53,28 @@
                             <p class="text-gray-900">Tempat, Tanggal Lahir</p>
                         </div>
                         <div class="col-12 col-md-8">
-                            <p>Bandung, 10 Januari 2000</p>
+                            <p><?= $profile['tempat_lahir']; ?> <?= $profile['tanggal_lahir']; ?></p>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <p class="text-gray-900">Jenis Kelamin</p>
                         </div>
                         <div class="col-12 col-md-8">
-                            <p>Perempuan</p>
+                            <p><?= $profile['jenis_klamin']; ?></p>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <p class="text-gray-900">No WhatsApp</p>
                         </div>
                         <div class="col-12 col-md-8">
-                            <p>08210808323</p>
+                            <p><?= $profile['phone']; ?></p>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <p class="text-gray-900">Alamat</p>
                         </div>
                         <div class="col-12 col-md-8">
-                            <p>Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat</p>
+                            <p><?= $profile['alamat']; ?></p>
                         </div>
 
                         <div class="col-12">

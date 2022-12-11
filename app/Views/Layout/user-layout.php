@@ -67,11 +67,11 @@
 						<img src="<?= base_url('assets/img/avatar.png') ?>" />
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-								Malika
+								<?= userlogin()->username; ?>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-item">
-									<a class="nav-link" href="<?= site_url(); ?>">Profil Saya</a>
+									<a class="nav-link" href="<?= site_url('profile'); ?>">Profil Saya</a>
 								</li>
 								<li class="dropdown-item">
 									<a class="nav-link" href="<?= site_url('logout'); ?>">Logout</a>
@@ -135,7 +135,7 @@
 	<!-- wa chat -->
 
 	<div class="floating-button">
-		<a href="#">
+		<a href="<?= site_url('consoler'); ?>">
 			<i class="bi bi-whatsapp"></i>
 		</a>
 	</div>

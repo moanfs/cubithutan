@@ -3,11 +3,14 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\UserModel;
 
 class Profile extends BaseController
 {
     public function index()
     {
-        return view('admin/profile');
+        $profile = new UserModel();
+        $data['profile'] = $profile->getUser();
+        return view('admin/profile', $data);
     }
 }

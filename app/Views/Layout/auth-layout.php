@@ -19,7 +19,7 @@
 
 	<?= $this->renderSection('content') ?>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-3">
@@ -63,15 +63,15 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 
 	<!-- wa chat -->
 
-	<div class="floating-button">
+	<!-- <div class="floating-button">
 		<a href="#">
 			<i class="bi bi-whatsapp"></i>
 		</a>
-	</div>
+	</div> -->
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>

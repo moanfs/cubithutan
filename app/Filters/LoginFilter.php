@@ -6,7 +6,7 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class RolerFilter implements FilterInterface
+class LoginFilter implements FilterInterface
 {
     /**
      * Do whatever processing this filter needs to do.
@@ -26,8 +26,7 @@ class RolerFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         //
-
-        if (session('group') != 'Admin') {
+        if (!session('id')) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
     }

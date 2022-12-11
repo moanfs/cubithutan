@@ -11,16 +11,38 @@
 				<div class="col-12 col-md-6">
 					<div class="card">
 						<div class="card-body">
-							<img src="<?= base_url('assets/img/logo.png') ?>" />
+							<a href="<?= site_url('/'); ?>">
+								<img src="<?= base_url('assets/img/logo.png') ?>" />
+							</a>
 							<p>Yuk Masuk Dulu!</p>
+							<?php if (session()->getFlashdata('message')) : ?>
+								<div class="alert alert-danger alert-dismissible show fade">
+									<div class="alert-body">
+										<b>Error !</b>
+										<?= session()->getFlashdata('message'); ?>
+									</div>
+								</div>
+							<?php endif; ?>
+							<?php if (session()->getFlashdata('error')) : ?>
+								<div class="alert alert-danger alert-dismissible show fade">
+									<div class="alert-body">
+										<b>Error !</b>
+										<?= session()->getFlashdata('error'); ?>
+									</div>
+								</div>
+							<?php endif; ?>
 							<form class="auth-form" action="<?= site_url('auth'); ?>" method="post">
 								<?= csrf_field() ?>
-								<input class="form-control is-invalid" type="text" name="email" placeholder="Masukan email atau nomor hp" />
-								<span class="invalid-feedback">erorr</span>
-								<input class="form-control" type="password" name="pass_hash" placeholder="Masukan kata sandi" />
-								<!-- <span class="invalid-feedback">erorr</span> -->
+								<input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" type="text" name="email" placeholder="Masukan email" value="<?= set_value('email'); ?>" />
+								<div class="invalid-feedback">
+									<?= $validation->getError('email'); ?>
+								</div>
+								<input class="form-control <?= ($validation->hasError('pass_hash')) ? 'is-invalid' : ''; ?>" type="password" name="pass_hash" placeholder="Masukan kata sandi" />
+								<div class="invalid-feedback">
+									<?= $validation->getError('pass_hash'); ?>
+								</div>
 								<a href="<?= site_url('lupa-password') ?>">Lupa Kata Sandi?</a>
-								<button class="btn btn-primary" type="submit">Masuk</button>
+								<button class="btn btn-primary " type="submit">Masuk</button>
 
 							</form>
 							<span>Belum Memiliki Akun? <a href="<?= site_url('register') ?>">Daftar akun sekarang</a></span>

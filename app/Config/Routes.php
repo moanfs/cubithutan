@@ -42,6 +42,7 @@ $routes->set404Override();
 $routes->post('auth', 'Auth::attemptLogin');
 $routes->get('login', 'Auth::login');
 $routes->get('logout', 'Auth::logout');
+$routes->get('adminlogout', 'Auth::adminlogout');
 $routes->get('register', 'Auth::register');
 $routes->get('lupa-password', 'Auth::lupaPassword');
 
@@ -64,6 +65,7 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('kontak', 'Contact::index');
 
     $routes->get('profile', 'Profile::index');
+    $routes->get('consoler', 'Consoler::index');
 });
 
 // --------------------------------------------------------------------
@@ -74,10 +76,18 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('/', 'Dashboard::index');
 
     $routes->get('podcast', 'Podcast::index');
+    $routes->post('podcast/create', 'Podcast::save');
+    $routes->delete('podcast/delete/(:num)', 'Podcast::delete/$1');
 
     $routes->get('materi', 'Materi::index');
+    $routes->post('materi/create', 'Materi::save');
+    $routes->delete('materi/delete/(:num)', 'Materi::delete/$1');
 
     $routes->get('profile', 'Profile::index');
+    $routes->get('pengguna', 'Pengguna::index');
+    $routes->get('konselor', 'Konselor::index');
+    $routes->get('curhat', 'Curhat::index');
+    $routes->get('konseling', 'Konseling::index');
 });
 
 /*

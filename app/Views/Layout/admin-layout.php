@@ -12,9 +12,7 @@
 
 	<!-- Custom fonts for this template-->
 	<link href="<?= base_url('assets/sbadmin/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
-	<link
-		href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 	<!-- Custom styles for this template-->
 	<link href="<?= base_url('assets/sbadmin/css/sb-admin-2.min.css') ?>" rel="stylesheet">
@@ -31,7 +29,7 @@
 		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			<!-- Sidebar - Brand -->
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= site_url('/') ?>">
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= site_url('admin') ?>">
 				<div class="sidebar-brand-icon rotate-n-15">
 					<i class="fas fa-laugh-wink"></i>
 				</div>
@@ -73,27 +71,43 @@
 				</a>
 			</li>
 
+			<!-- Nav Item - Materi -->
+			<li class="nav-item">
+				<a class="nav-link" href="<?= site_url('admin/konseling') ?>">
+					<i class="fas fa-images"></i>
+					<span>Konseling</span>
+				</a>
+			</li>
+
+			<!-- Nav Item - Materi -->
+			<li class="nav-item">
+				<a class="nav-link" href="<?= site_url('admin/curhat') ?>">
+					<i class="fas fa-images"></i>
+					<span>Curhat</span>
+				</a>
+			</li>
+
 			<!-- Divider -->
 			<hr class="sidebar-divider">
 
 			<!-- Heading -->
 			<div class="sidebar-heading">
-				Akun
+				Pengguna
 			</div>
 
 			<!-- Nav Item - Profile -->
 			<li class="nav-item">
-				<a class="nav-link" href="<?= site_url('admin/profile') ?>">
+				<a class="nav-link" href="<?= site_url('admin/pengguna') ?>">
 					<i class="fas fa-user"></i>
-					<span>Profile</span>
+					<span>Pengguna</span>
 				</a>
 			</li>
 
-			<!-- Nav Item - Keluar -->
+			<!-- Nav Item - Profile -->
 			<li class="nav-item">
-				<a class="nav-link" href="#"  data-toggle="modal" data-target="#logoutModal">
-					<i class="fas fa-sign-out-alt"></i>
-					<span>Keluar</span>
+				<a class="nav-link" href="<?= site_url('admin/konselor') ?>">
+					<i class="fas fa-user"></i>
+					<span>Konselor</span>
 				</a>
 			</li>
 
@@ -127,20 +141,17 @@
 
 						<!-- Nav Item - User Information -->
 						<li class="nav-item dropdown no-arrow">
-							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="mr-2 d-none d-lg-inline text-gray-600 small">Malika</span>
-								<img class="img-profile rounded-circle"
-									src="<?= base_url('assets/img/avatar.png') ?>">
+							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small"><b><?= userlogin()->username; ?></b></span>
+								<img class="img-profile rounded-circle" src="<?= base_url('assets/img/avatar.png') ?>">
 							</a>
 							<!-- Dropdown - User Information -->
-							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-								aria-labelledby="userDropdown">
+							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="<?= site_url('admin/profile') ?>">
 									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 									Profile
 								</a>
-								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+								<a class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 									Keluar
 								</a>
@@ -179,8 +190,7 @@
 	</a>
 
 	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-		aria-hidden="true">
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -191,7 +201,7 @@
 				<div class="modal-body">Yakin untuk keluar?</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-					<a class="btn btn-primary" href="<?= site_url('/') ?>">Keluar</a>
+					<a class="btn btn-primary" href="<?= site_url('adminlogout') ?>">Keluar</a>
 				</div>
 			</div>
 		</div>
