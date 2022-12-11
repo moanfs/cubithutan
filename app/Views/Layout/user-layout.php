@@ -61,7 +61,7 @@
 				<div class="navbar-right">
 					<?php if (!session('id')) : ?>
 						<!-- sebelum login -->
-						<button class="nav-button" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</button>
+						<button class="nav-button"><a href="<?= site_url('login') ?>">Masuk</a></button>
 					<?php else : ?>
 						<!-- setelah login -->
 						<img src="<?= base_url('assets/img/avatar.png') ?>" />
