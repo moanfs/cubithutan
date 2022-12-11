@@ -40,7 +40,10 @@ $routes->set404Override();
 // Route User
 // --------------------------------------------------------------------
 $routes->post('auth', 'Auth::attemptLogin');
+$routes->get('login', 'Auth::login');
 $routes->get('logout', 'Auth::logout');
+$routes->get('register', 'Auth::register');
+$routes->get('lupa-password', 'Auth::lupaPassword');
 
 $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('/', 'Dashboard::index');

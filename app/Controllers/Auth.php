@@ -54,9 +54,24 @@ class Auth extends BaseController
         }
     }
 
+    public function login()
+    {
+        return view('login');
+    }
+
     public function logout()
     {
         session()->remove('id');
         return redirect()->back();
+    }
+
+    public function register()
+    {
+        return view('register');
+    }
+
+    public function lupaPassword()
+    {
+        return view('lupa_password');
     }
 }

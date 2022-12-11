@@ -318,40 +318,43 @@ body {
   font-size: 1.5rem;
 }
 
-.modal-log .modal-dialog .modal-body {
+.auth-page {
+  margin-bottom: 64px;
+}
+.auth-page .card-body {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
   align-items: center;
 }
-.modal-log .modal-dialog .modal-body img {
+.auth-page .card-body img {
   margin: 16px 0;
 }
-.modal-log .modal-dialog .modal-body p {
+.auth-page .card-body p {
   margin-bottom: 16px;
 }
-.modal-log .modal-dialog .modal-body .modal-form {
+.auth-page .card-body .auth-form {
   width: 100%;
 }
-.modal-log .modal-dialog .modal-body .modal-form .form-control {
-  margin-bottom: 16px;
+.auth-page .card-body .auth-form .form-control {
+  margin-top: 16px;
   width: 100%;
 }
-.modal-log .modal-dialog .modal-body .modal-form .btn {
+.auth-page .card-body .auth-form .btn {
   margin: 16px 0;
   width: 100%;
 }
-.modal-log .modal-dialog .modal-body .modal-form a {
+.auth-page .card-body .auth-form a {
+  margin-top: 16px;
   display: block;
   text-align: right;
   font-weight: 500;
   color: #0275D8;
   text-decoration: none;
 }
-.modal-log .modal-dialog .modal-body span {
+.auth-page .card-body span {
   margin: 8px;
 }
-.modal-log .modal-dialog .modal-body span a {
+.auth-page .card-body span a {
   font-weight: 500;
   color: #0275D8;
   text-decoration: none;

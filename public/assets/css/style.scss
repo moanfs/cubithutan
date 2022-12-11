@@ -364,54 +364,52 @@ body {
 	}
 }
 
-.modal-log {
-	.modal-dialog {
-		// width: fit-content;
+.auth-page {
+	margin-bottom: 64px;
 
-		.modal-body {
-			display: flex;
-			flex-direction: column;
-			flex-basis: 100%;
-			align-items: center;
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-			img {
-				margin: 16px 0;
-			}
+		img {
+			margin: 16px 0;
+		}
 
-			p {
-				margin-bottom: 16px;
-			}
+		p {
+			margin-bottom: 16px;
+		}
 
-			.modal-form {
+		.auth-form {
+			width: 100%;
+
+			.form-control {
+				margin-top: 16px;
 				width: 100%;
-
-				.form-control {
-					margin-bottom: 16px;
-					width: 100%;
-				}
-
-				.btn {
-					margin: 16px 0;
-					width: 100%;
-				}
-
-				a {
-					display: block;
-					text-align: right;
-					font-weight: 500;
-					color: $primary;
-					text-decoration: none;
-				}
 			}
 
-			span {
-				margin: 8px;
-				
-				a {
-					font-weight: 500;
-					color: $primary;
-					text-decoration: none;
-				}
+			.btn {
+				margin: 16px 0;
+				width: 100%;
+			}
+
+			a {
+				margin-top: 16px;
+				display: block;
+				text-align: right;
+				font-weight: 500;
+				color: $primary;
+				text-decoration: none;
+			}
+		}
+
+		span {
+			margin: 8px;
+			
+			a {
+				font-weight: 500;
+				color: $primary;
+				text-decoration: none;
 			}
 		}
 	}
