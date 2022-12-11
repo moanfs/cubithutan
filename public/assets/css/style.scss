@@ -189,6 +189,11 @@ body {
 
 			.hero-img {
 				margin-left: auto;
+				display: none;
+
+				@media screen and (min-width: $md) {
+					display: block;
+				}
 			}
 		}
 
