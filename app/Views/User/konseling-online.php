@@ -104,7 +104,7 @@
 					</li>
 				</ul>
 				<div class="tab-content" id="pillsContent">
-					<div class="tab-pane show active col-6" id="tujuan" tabindex="0">
+					<div class="tab-pane show active col-6 mx-auto" id="tujuan" tabindex="0">
 						<h2>Tujuan Dari Konseling Individual Online</h2>
 						<p>Membantu mengatasi permasalahan yang dimikili konseli secara online. Konseling online ini dinilai Praktis, sehingga dapat mengurangi potensi hambatan yang dapat membuat konseling dibatalkan. Tidak menghabiskan waktu untuk perjalanan. Secara umum lebih murah ketimbang konseling tatap muka. Terhindar dari potensi rasa takut bertemu dengan kerabat/kenalan saat di lokasi konseling. Adanya konseling online juga merupakan salah satu harapan bagi konseli yang masih cemas dengan pelabelan dari masyarakat. Dengan konseling online maka individu tersebut tidak perlu takut akan stigma orang sekitar karena proses konseling dilakukan melalui media </p>
 

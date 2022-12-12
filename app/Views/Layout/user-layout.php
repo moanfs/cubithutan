@@ -124,7 +124,9 @@
 						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
 					</p>
 					<div class="footer-img">
-						<img src="<?= base_url('assets/img/logo.png') ?>" />
+						<a href="<?= site_url('/') ?>">
+							<img src="<?= base_url('assets/img/logo.png') ?>" />
+						</a>
 					</div>
 					<p>Copyright 2022 Cubit Hutan</p>
 				</div>

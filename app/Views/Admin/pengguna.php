@@ -34,7 +34,7 @@
                                 <td><?= $value['username']; ?></td>
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['phone']; ?></td>
-                                <td><a href=""></a></td>
+                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#lihatdetail">Lihat Detail</button></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -44,5 +44,42 @@
     </div>
 </div>
 <!-- /.container-fluid -->
+
+<div class="modal modal-profile" id="lihatdetail">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="modal-form">
+                            <h1>Lihat Detail Pengguna</h1>
+                            <form onSubmit="return confirm('Yakin untuk menghapus?')" action="" method="POST">
+                                <?= csrf_field() ?>
+                                <label class="form-label">Nama Lengkap</label>
+                                <input class="form-control" type="text" name="name" value="" />
+
+                                <label class="form-label">Username</label>
+                                <input class="form-control" type="text" name="username" value="" />
+
+                                <label class="form-label">Email</label>
+                                <input class="form-control" type="text" name="email" value="" />
+
+                                <label class="form-label">Phone</label>
+                                <input class="form-control" type="text" name="phone" value="" />
+
+                                <button class="btn btn-danger" type="submit">Hapus</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?= $this->endSection() ?>

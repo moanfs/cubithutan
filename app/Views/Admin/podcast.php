@@ -30,10 +30,10 @@
                                     <iframe class="podcast-episode" src="<?= $value['link']; ?>"></iframe>
                                 </td>
                                 <td>
-                                    <form action="<?= site_url('admin/podcast/delete/' . $value['id']); ?>" method="post" class="d-inline">
+                                    <form onSubmit="return confirm('Yakin untuk menghapus?')" action="<?= site_url('admin/podcast/delete/' . $value['id']); ?>" method="post" class="d-inline">
                                         <?= csrf_field() ?>
                                         <input type="hidden" name="_method" value="DELETE">
-                                        <input type="submit" name="Hapus" value="Hapus" class="btn btn-danger bg-aa-danger rounded-pill border-0 py-2 px-3 color-aa-light m-2" id="">
+                                        <input type="submit" name="Hapus" value="Hapus" class="btn btn-danger">
                                     </form>
                                 </td>
                             </tr>
@@ -65,7 +65,6 @@
                                 <input class="form-control" type="text" name="link" placeholder="link" />
                                 <input class="form-control" type="text" name="desc" placeholder="deskripsi" />
                                 <button class="btn btn-primary" type="submit">Simpan</button>
-
                             </form>
                         </div>
                     </div>
