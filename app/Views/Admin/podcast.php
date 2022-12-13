@@ -12,7 +12,7 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#tambahpodcast">Tambah Episode</button>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#tambahpodcast">Tambah Episode</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -26,9 +26,7 @@
                     <tbody>
                         <?php foreach ($podcast as $key => $value) : ?>
                             <tr>
-                                <td>
-                                    <iframe class="podcast-episode" src="<?= $value['link']; ?>"></iframe>
-                                </td>
+                                <td><?= $value['link']; ?></td>
                                 <td>
                                     <form onSubmit="return confirm('Yakin untuk menghapus?')" action="<?= site_url('admin/podcast/delete/' . $value['id']); ?>" method="post" class="d-inline">
                                         <?= csrf_field() ?>

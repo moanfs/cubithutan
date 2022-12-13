@@ -20,7 +20,6 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Lengkap</th>
-                            <th>Username</th>
                             <th>Email</th>
                             <th>No Phone</th>
                             <th>Aksi</th>
@@ -31,7 +30,7 @@
                             <tr>
                                 <th><?= $key + 1; ?></th>
                                 <td><?= $value['first_name']; ?> <?= $value['last_name']; ?></td>
-                                <td><?= $value['username']; ?></td>
+
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['phone']; ?></td>
                                 <td><a href=""></a></td>

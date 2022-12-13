@@ -64,7 +64,9 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
 
     $routes->get('kontak', 'Contact::index');
 
-    $routes->get('profile', 'Profile::index');
+    $routes->get('profile/(:num)/(:segment)', 'Profile::index/$1/$1');
+    $routes->post('profile/update/(:num)/(:segment)', 'Profile::update/$1/$1');
+
     $routes->get('consoler', 'Consoler::index');
 });
 

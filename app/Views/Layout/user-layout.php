@@ -54,6 +54,9 @@
 						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="<?= site_url('consoler') ?>">Konselor</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="<?= site_url('kontak') ?>">Kontak</a>
 					</li>
 				</ul>
@@ -67,11 +70,11 @@
 						<img src="<?= base_url('assets/img/avatar.png') ?>" />
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-								<?= userlogin()->username; ?>
+								<?= userlogin()->first_name; ?>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-item">
-									<a class="nav-link" href="<?= site_url('profile'); ?>">Profil Saya</a>
+									<a class="nav-link" href="<?= site_url('profile/' . userlogin()->id . '/' . userlogin()->slug); ?>">Profil Saya</a>
 								</li>
 								<li class="dropdown-item">
 									<a class="nav-link" href="<?= site_url('logout'); ?>">Logout</a>
@@ -136,11 +139,11 @@
 
 	<!-- wa chat -->
 
-	<div class="floating-button">
-		<a href="<?= site_url('consoler'); ?>">
+	<!-- <div class="floating-button">
+		<a href="">
 			<i class="bi bi-whatsapp"></i>
 		</a>
-	</div>
+	</div> -->
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>

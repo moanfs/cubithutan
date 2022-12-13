@@ -13,16 +13,19 @@ class CubitHutan extends Migration
          */
         $this->forge->addField([
             'id'                => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true,],
-            'username'          => ['type' => 'VARCHAR', 'constraint' => 125, 'null' => true],
+            'slug'              => ['type' => 'VARCHAR', 'constraint' => 125],
             'first_name'        => ['type' => 'VARCHAR', 'constraint' => 125],
             'last_name'         => ['type' => 'VARCHAR', 'constraint' => 125],
             'email'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'phone'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
-            'tempat_lahir'     => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'tempat_lahir'      => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'tanggal_lahir'     => ['type' => 'date', 'null' => true],
             'jenis_klamin'      => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'alamat'            => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'pass_hash'         => ['type' => 'varchar', 'constraint' => 125,],
+            'profile_consoler'  => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'desc_consoler'     => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'active_consoler'   => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
             'img_profile'       => ['type' => 'varchar', 'constraint' => 125, 'default' => 'profile.png'],
             'active'            => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
             'created_at'        => ['type' => 'datetime', 'null' => true],
@@ -70,6 +73,7 @@ class CubitHutan extends Migration
 
         $this->forge->addField([
             'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'slug'              => ['type' => 'VARCHAR', 'constraint' => 125, 'null' => true],
             'name'              => ['type' => 'varchar', 'constraint' => 125],
             'img'               => ['type' => 'varchar', 'constraint' => 225],
             'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
@@ -82,6 +86,7 @@ class CubitHutan extends Migration
 
         $this->forge->addField([
             'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'slug'              => ['type' => 'VARCHAR', 'constraint' => 125, 'null' => true],
             'name'              => ['type' => 'varchar', 'constraint' => 125],
             'link'              => ['type' => 'varchar', 'constraint' => 225],
             'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
@@ -94,6 +99,7 @@ class CubitHutan extends Migration
 
         $this->forge->addField([
             'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'slug'              => ['type' => 'VARCHAR', 'constraint' => 125, 'null' => true],
             'name'              => ['type' => 'varchar', 'constraint' => 125],
             'icon'              => ['type' => 'varchar', 'constraint' => 225],
             'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],
@@ -106,6 +112,7 @@ class CubitHutan extends Migration
         $this->forge->createTable('curhat', true);
         $this->forge->addField([
             'id'                => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'slug'              => ['type' => 'VARCHAR', 'constraint' => 125, 'null' => true],
             'name'              => ['type' => 'varchar', 'constraint' => 125],
             'icon'              => ['type' => 'varchar', 'constraint' => 225],
             'desc'              => ['type' => 'varchar', 'constraint' => 225, 'null' => true],

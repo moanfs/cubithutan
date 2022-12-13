@@ -11,7 +11,9 @@
 				<div class="col-12 col-md-4">
 					<div class="card">
 						<div class="card-body profile-img">
-							<img src="<?= base_url('assets/img/avatar-lg.png') ?>" />
+							<a data-bs-toggle="modal" data-bs-target="#fotoModal">
+								<img src="<?= base_url('assets/img/avatar-lg.png') ?>" />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -20,17 +22,17 @@
 						<div class="card-body">
 							<div class="row">
 								<div class="col-12 col-md-4">
-									<p class="label">Nama Panggilan</p>
+									<p class="label">Nama Lengkap</p>
 								</div>
 								<div class="col-12 col-md-8">
-									<p>Malika</p>
+									<p><?= $profile['first_name']; ?> <?= $profile['last_name']; ?></p>
 								</div>
 
 								<div class="col-12 col-md-4">
 									<p class="label">Email</p>
 								</div>
 								<div class="col-12 col-md-8">
-									<span>malika@gmail.com</span>
+									<span><?= $profile['email']; ?></span>
 									<span>
 										<a href="#">Ganti email</a>
 									</span>
@@ -50,28 +52,28 @@
 									<p class="label">Tempat, Tanggal Lahir</p>
 								</div>
 								<div class="col-12 col-md-8">
-									<p>Bandung, 10 Januari 2000</p>
+									<p><?= $profile['tempat_lahir']; ?> <?= $profile['tanggal_lahir']; ?></p>
 								</div>
 
 								<div class="col-12 col-md-4">
 									<p class="label">Jenis Kelamin</p>
 								</div>
 								<div class="col-12 col-md-8">
-									<p>Perempuan</p>
+									<p><?= $profile['jenis_klamin']; ?></p>
 								</div>
 
 								<div class="col-12 col-md-4">
 									<p class="label">No WhatsApp</p>
 								</div>
 								<div class="col-12 col-md-8">
-									<p>08210808323</p>
+									<p><?= $profile['phone']; ?></p>
 								</div>
 
 								<div class="col-12 col-md-4">
 									<p class="label">Alamat</p>
 								</div>
 								<div class="col-12 col-md-8">
-									<p>Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat</p>
+									<p><?= $profile['alamat']; ?></p>
 								</div>
 
 								<div class="col-12">
@@ -92,34 +94,31 @@
 	<div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
 		<div class="modal-content">
 			<div class="modal-header">
-	        	<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-12 col-md-4">
-						<div class="card">
-							<!-- klik card untuk pilih upload -->
-							<label class="card-body profile-img" for="uploadPhoto">
-								<img src="<?= base_url('assets/img/avatar-lg.png') ?>" />
-								<p>Besar file maksimum 10 MB.</p>
-								<p>Format file JPG/JPEG/PNG.</p>
-							</label>
-							<input type="file" id="uploadPhoto" accept="image/jpg, image/jpeg, image/png" hidden />
-						</div>
-					</div>
-					<div class="col-12 col-md-8">
+
+					<div class="col-12 col-md-12">
 						<div class="modal-form">
 							<h1>Perbarui Profil</h1>
-							<form>
-								<input class="form-control" type="text" placeholder="nama panggilan" />
-								<input class="form-control" type="text" placeholder="tempat lahir" />
-								<input class="form-control" type="text" placeholder="tanggal lahir" />
-								<input class="form-control" type="text" placeholder="jenis kelamin" />
-								<input class="form-control" type="text" placeholder="no whatsapp" />
-								<textarea class="form-control" placeholder="alamat"></textarea>
+							<form action="<?= site_url('profile/update/' . $profile['id'] . '/' . $profile['slug']); ?>" method="post" enctype="multipart/form-data">
+								<?= csrf_field() ?>
+								<input class="form-control" value="<?= $profile['first_name']; ?>" name="first_name" type="text" placeholder="nama depan" />
+								<input class="form-control" value="<?= $profile['last_name']; ?>" name="last_name" type="text" placeholder="nama panggilan" />
+								<input class="form-control" value="<?= $profile['phone']; ?>" name="phone" type="text" placeholder="phone" />
+								<input class="form-control" value="<?= $profile['tempat_lahir']; ?>" name="tempat_lahir" type="text" placeholder="tempat lahir" />
+								<input class="form-control" value="<?= $profile['tanggal_lahir']; ?>" name="tanggal_lahir" type="date" placeholder="tanggal lahir" />
+								<select class="form-control" name="jenis_klamin">
+									<option selected disabled>Jenis Kelamin</option>
+									<option value="Laki laki">Laki Laki</option>
+									<option value="Perempuan">Perempuan</option>
+									<option value="lainya">lainya</option>
+								</select>
+								<textarea class="form-control" value="<?= $profile['alamat']; ?>" name="alamat" placeholder="alamat"></textarea>
 
 								<div class="form-button">
-									<button class="btn btn-primary" type="submit">Simpan</button>
+									<input class="btn btn-primary" type="submit" value="Simpan">
 									<button class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
 								</div>
 							</form>
@@ -131,4 +130,31 @@
 	</div>
 </div>
 
+<div class="modal modal-profile" id="fotoModal">
+	<div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<!-- <div class="> -->
+					<div class="card">
+						<!-- klik card untuk pilih upload -->
+						<label class="card-body profile-img" for="uploadPhoto">
+							<img src="<?= base_url('assets/img/avatar-lg.png') ?>" />
+							<p>Besar file maksimum 10 MB.</p>
+							<p>Format file JPG/JPEG/PNG.</p>
+						</label>
+						<input type="file" id="uploadPhoto" accept="image/jpg, image/jpeg, image/png" hidden />
+					</div>
+					<!-- </div> -->
+					<div class="modal modal-profile" id="profileModal">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <?= $this->endSection() ?>

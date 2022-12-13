@@ -20,9 +20,9 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Lengkap</th>
-                            <th>Username</th>
                             <th>Email</th>
                             <th>No Phone</th>
+                            <th>Jenis Kelamin</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -31,9 +31,9 @@
                             <tr>
                                 <th><?= $key + 1; ?></th>
                                 <td><?= $value['first_name']; ?> <?= $value['last_name']; ?></td>
-                                <td><?= $value['username']; ?></td>
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['phone']; ?></td>
+                                <td><?= $value['jenis_klamin']; ?></td>
                                 <td><button class="btn btn-primary" data-toggle="modal" data-target="#lihatdetail">Lihat Detail</button></td>
                             </tr>
                         <?php endforeach; ?>

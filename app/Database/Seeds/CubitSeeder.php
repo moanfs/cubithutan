@@ -28,26 +28,29 @@ class CubitSeeder extends Seeder
         $this->db->table('auth_group')->insert($data);
 
         $data = [
-            'username' => 'cubithutan',
+            'slug' => 'cubit-hutan',
             'email'    => 'cubithutan@gmail.com',
             'first_name' => 'Cubit',
             'last_name' => 'Hutan',
+            'active'    => '1',
             'pass_hash' => password_hash('12345', PASSWORD_DEFAULT)
         ];
         $this->db->table('users')->insert($data);
         $data = [
-            'username' => 'consoler',
+            'slug' => 'consoler',
             'email'    => 'consoler@mail.com',
             'first_name' => 'Consoler',
             'last_name' => 'Pertama',
+            'active'    => '1',
             'pass_hash' => password_hash('12345', PASSWORD_DEFAULT)
         ];
         $this->db->table('users')->insert($data);
         $data = [
-            'username' => 'user',
+            'slug' => 'user',
             'email'    => 'user@mail.com',
             'first_name' => 'User',
             'last_name' => 'Coba',
+            'active'    => '1',
             'pass_hash' => password_hash('12345', PASSWORD_DEFAULT)
         ];
         $this->db->table('users')->insert($data);

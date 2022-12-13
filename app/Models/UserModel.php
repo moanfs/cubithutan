@@ -20,7 +20,7 @@ class UserModel extends Model
     ];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -32,16 +32,6 @@ class UserModel extends Model
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 
-    // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
 
     public function getAllPengguna()
     {
@@ -52,12 +42,14 @@ class UserModel extends Model
             ->get()->getResultArray();
     }
 
+    // consoler cubit hutan
     public function getAllKonsoler()
     {
         return $this->db->table('users')
             ->join('auth_user_group', 'auth_user_group.user_id=users.id')
             ->join('auth_group', 'auth_group.group_id=auth_user_group.group_id')
             ->where('auth_group.group_id', '2')
+            ->where('active_consoler', '1')
             ->get()->getResultArray();
     }
 
@@ -68,5 +60,12 @@ class UserModel extends Model
             ->join('auth_group', 'auth_group.group_id=auth_user_group.group_id')
             ->where('id', session('id'))
             ->get()->getRowArray();
+    }
+
+    public function updateProfileUser($dataUpdate)
+    {
+        $this->db->table('users')
+            ->where('id', session('id'))
+            ->update($dataUpdate);
     }
 }
