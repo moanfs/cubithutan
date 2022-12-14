@@ -539,8 +539,8 @@ body {
   align-items: center;
 }
 .konselor-page .konselor-item .konselor-img {
-  max-width: 100%;
-  margin-bottom: 8px;
+  max-width: 50%;
+  margin-bottom: 2px;
 }
 .konselor-page .konselor-item .konselor-name {
   font-size: 1.25rem;
@@ -558,7 +558,7 @@ body {
 }
 .about-page .about-team .member {
   margin: 8px;
-  padding: 24px 64px;
+  padding: 12px 32px;
   background-color: #DDD8FF;
   border-radius: 12px;
 }

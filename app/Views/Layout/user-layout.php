@@ -123,15 +123,14 @@
 				</div>
 				<div class="col-12 col-md-5 order-md-first">
 					<p>
-						<a href="https://saweria.co/widgets/qr?streamKey=d52ff0c7726d9a97ab18553e0cd5767e">asaasaa</a>
-						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
+						Dukung selalu kami
 					</p>
-					<div class="footer-img">
-						<a href="<?= site_url('/') ?>">
-							<img src="<?= base_url('assets/img/logo.png') ?>" />
-						</a>
-					</div>
-					<p>Copyright 2022 Cubit Hutan</p>
+					<!-- <div class="footer"> -->
+					<a href="https://saweria.co/cubithutan6" class="mb-5">
+						<img src="<?= base_url('assets/img/saweria.jpg') ?>" width="140" />
+					</a>
+					<!-- </div> -->
+					<p class="mt-2">Copyright 2022 Cubit Hutan</p>
 				</div>
 			</div>
 		</div>

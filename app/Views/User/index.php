@@ -1,9 +1,7 @@
 <!-- halaman index user -->
-
 <?= $this->extend('layout/user-layout') ?>
 
 <?= $this->section('content') ?>
-
 <main>
 	<div class="container">
 		<div class="hero">
@@ -56,7 +54,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="comparison">
 		<div class="comparison-heading">
 			<h1>Peer Konseling & Curhat</h1>
@@ -71,11 +68,7 @@
 							<li>Membantu permasalahan klinis </li>
 							<p>(contoh: anxiety) dan juga masalah karir.</p>
 							<li>Memberikan action plan atau solusi.</li>
-							<!-- <p>2. Memberikan action plan atau solusi.</p> -->
 							<li>Memberikan diagnosis.</li>
-							<!-- <p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-							<li>Lorem ipsum</li>
-							<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p> -->
 						</ul>
 					</div>
 				</div>
@@ -84,13 +77,9 @@
 						<h3 class="curhat">Curhat</h3>
 						<ul>
 							<li>Fokus membantu permasalahan percintaan.</li>
-							<!-- <p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p> -->
 							<li>Dapat memberikan action plan/solusi dan juga tidak dapat memberikan action plan (tergantung klien hanya mau didengar atau membutuhkan saran juga).</li>
 							<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
 							<li>Tidak memberikan diagnosis.</li>
-							<!-- <p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p>
-							<li>Lorem ipsum</li>
-							<p>(Contoh: trauma, depresi, anxiety, bipolar, masalah seksualitas)</p> -->
 						</ul>
 					</div>
 				</div>
@@ -132,24 +121,19 @@
 			</div>
 		</div>
 	</div>
-	<div class="podcast">
+	<div class="podcast d-flex">
 		<div class="container">
 			<div class="podcast-heading">
 				<h1>Dengarkan Kami Lewat Podcast</h1>
 				<p>Mendengarkan cerita orang lain dapat membantu mendapatkan prespektif lain, loh</p>
 			</div>
 			<div class="podcast-playlist">
-				<!-- <iframe class="podcast-latest" src="https://open.spotify.com/embed/episode/1tMsuM06OQmBTKtLBP0TYm?si=96fbd28b78bc44ab"></iframe>
-				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/6reBRsYux87Lt6xLSdkG0M?si=3284e9c8061845f4"></iframe>
-				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4owOYNFwxXICMQwrog9LNK?si=4004245b3ebc4ad2"></iframe>
-				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4iGrj9Dkttq86TkI1lvDOG?si=c7b83f7cb9094931"></iframe> -->
 				<?php foreach ($podcast as $key => $value) : ?>
 					<?= $value['link'] ?>
 				<?php endforeach; ?>
 			</div>
-			<a class="podcast-more" href="<?= site_url('podcast') ?>">Lihat Semua Episode →</a>
 		</div>
+		<a class="podcast-more" href="<?= site_url('podcast') ?>">Lihat Semua Episode →</a>
 	</div>
 </main>
-
 <?= $this->endSection() ?>

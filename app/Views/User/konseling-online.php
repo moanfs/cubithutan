@@ -1,9 +1,7 @@
 <!-- halaman konseling individual online -->
-
 <?= $this->extend('layout/user-layout') ?>
 
 <?= $this->section('content') ?>
-
 <main>
 	<div class="container">
 		<div class="konseling-page">
@@ -12,76 +10,52 @@
 					<div class="konseling-topics">
 						<p>Pilih Topik Konseling</p>
 						<div class="row">
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
+									<i class="bi bi-arrow-through-heart"></i>
+									<p>Percintaan</p>
+								</a>
+							</div>
+							<div class="col-4">
+								<a class="konseling-item" href="#">
+									<i class="bi bi-person-fill-exclamation"></i>
 									<p>Kecemasan</p>
 								</a>
 							</div>
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
+									<i class="bi bi-person-slash"></i>
+									<p>Stress</p>
 								</a>
 							</div>
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
+									<i class="bi bi-person-down"></i>
+									<p>Hopelessness</p>
 								</a>
 							</div>
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
+									<i class="bi bi-person-workspace"></i>
+									<p>Karir</p>
 								</a>
 							</div>
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
+									<i class="bi bi-clipboard2-pulse"></i>
+									<p>Prospek kerja</p>
 								</a>
 							</div>
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
+									<i class="bi bi-bookmark-star"></i>
+									<p>Pemilihan jurusan kuliah</p>
 								</a>
 							</div>
-							<div class="col-3">
+							<div class="col-4">
 								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
-								</a>
-							</div>
-							<div class="col-3">
-								<a class="konseling-item" href="#">
-									<i class="bi bi-emoji-neutral"></i>
-									<p>Kecemasan</p>
+									<i class="bi bi-pc-display"></i>
+									<p>Pemilihan jurusan pekerjaan</p>
 								</a>
 							</div>
 						</div>
@@ -111,14 +85,14 @@
 					</div>
 					<div class="tab-pane" id="pertanyaan" tabindex="0">
 						<ul>
-							<li>1. Percintaan</li>
-							<li>2. Kecemasan</li>
-							<li>3. Stress</li>
-							<li>4. Hopelessness</li>
-							<li>5. Karir</li>
-							<li>6. Prospek kerja</li>
-							<li>7. Pemilihan jurusan kuliah</li>
-							<li>8. Pemilihan jurusan pekerjaan</li>
+							<li>Percintaan</li>
+							<li>Kecemasan</li>
+							<li>Stress</li>
+							<li>Hopelessness</li>
+							<li>Karir</li>
+							<li>Prospek kerja</li>
+							<li>Pemilihan jurusan kuliah</li>
+							<li>Pemilihan jurusan pekerjaan</li>
 						</ul>
 					</div>
 
@@ -127,5 +101,4 @@
 		</div>
 	</div>
 </main>
-
 <?= $this->endSection() ?>
