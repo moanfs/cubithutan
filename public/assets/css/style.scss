@@ -617,6 +617,31 @@ body {
 	}
 }
 
+.konselor-page {
+	margin: 32px 0;
+
+	h1 {
+		margin: 16px 0;
+	}
+
+	.konselor-item {
+		margin-bottom: 16px;
+		align-items: center;
+
+		.konselor-img {
+			max-width: 100%;
+			margin-bottom: 8px;
+		}
+
+		.konselor-name {
+			font-size: 1.25rem;
+		}
+
+		.konselor-desc {
+			margin-bottom: 16px;
+		}
+	}
+}
 
 .about-page {
 	margin: 32px 0;
