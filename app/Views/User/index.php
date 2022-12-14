@@ -143,6 +143,9 @@
 				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/6reBRsYux87Lt6xLSdkG0M?si=3284e9c8061845f4"></iframe>
 				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4owOYNFwxXICMQwrog9LNK?si=4004245b3ebc4ad2"></iframe>
 				<iframe class="podcast-episode" src="https://open.spotify.com/embed/episode/4iGrj9Dkttq86TkI1lvDOG?si=c7b83f7cb9094931"></iframe> -->
+				<?php foreach ($podcast as $key => $value) : ?>
+					<?= $value['link'] ?>
+				<?php endforeach; ?>
 			</div>
 			<a class="podcast-more" href="<?= site_url('podcast') ?>">Lihat Semua Episode →</a>
 		</div>

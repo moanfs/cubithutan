@@ -61,4 +61,12 @@ class PodcastModel extends Model
             ->where('id', $id)
             ->delete();
     }
+
+    public function getIndexPodcast()
+    {
+        return $this->db->table('podcast')
+            ->orderBy('id', 'desc')
+            ->limit('3')
+            ->get()->getResultArray();
+    }
 }
