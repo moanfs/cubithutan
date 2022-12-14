@@ -528,6 +528,13 @@ body {
   height: auto;
 }
 
+.consoler-page {
+  margin: 32px 0;
+}
+.consoler-page .card-img {
+  height: 200px;
+}
+
 .about-page {
   margin: 32px 0;
 }

@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <main>
     <div class="container">
-        <div class="materi-page">
+        <div class="consoler-page">
             <div class="card">
                 <div class="card-header">
                     Konselor Cubit Hutan
