@@ -1,6 +1,6 @@
 <!-- halaman podcast admin -->
 
-<?= $this->extend('layout/admin-layout') ?>
+<?= $this->extend('Layout/admin-layout') ?>
 
 <?= $this->section('content') ?>
 

@@ -1,4 +1,4 @@
-<?= $this->extend('layout/user-layout') ?>
+<?= $this->extend('Layout/user-layout') ?>
 
 <?= $this->section('content') ?>
 <main>
@@ -44,7 +44,7 @@
             <?php foreach ($consoler as $key => $value) : ?>
                 <div class="row konselor-item">
                     <div class="col-12 col-md-4">
-                        <img class="konselor-img rounded" src="<?= site_url('assets/img/' . $value['profile_consoler']); ?>" />
+                        <img class="konselor-img" src="<?= site_url('assets/img/' . $value['profile_consoler']); ?>" />
                     </div>
                     <div class="col-12 col-md-8">
                         <h2 class="konselor-name"><?= $value['first_name']; ?> <?= $value['last_name']; ?></h2>

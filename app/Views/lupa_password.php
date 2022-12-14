@@ -1,6 +1,6 @@
 <!-- halaman login -->
 
-<?= $this->extend('layout/auth-layout') ?>
+<?= $this->extend('Layout/auth-layout') ?>
 
 <?= $this->section('content') ?>
 

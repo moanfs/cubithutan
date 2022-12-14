@@ -1,6 +1,6 @@
 <!-- halaman curhat -->
 
-<?= $this->extend('layout/user-layout') ?>
+<?= $this->extend('Layout/user-layout') ?>
 
 <?= $this->section('content') ?>
 <main>

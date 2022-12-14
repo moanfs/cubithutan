@@ -298,12 +298,7 @@ body {
     font-size: 1.25rem;
   }
 }
-.podcast .podcast-playlist .podcast-latest {
-  margin: 4px 0;
-  width: 100%;
-  height: 232px;
-}
-.podcast .podcast-playlist .podcast-episode {
+.podcast .podcast-playlist iframe {
   margin: 4px 0;
   width: 100%;
   height: 80px;
@@ -503,7 +498,7 @@ body {
 .podcast-page .podcast-playlist {
   margin-top: 32px;
 }
-.podcast-page .podcast-playlist .podcast-episode {
+.podcast-page .podcast-playlist iframe {
   margin: 4px 0;
   width: 100%;
   height: 232px;
@@ -541,9 +536,13 @@ body {
 .konselor-page .konselor-item .konselor-img {
   display: block;
   margin: auto;
-  max-width: 100%;
-  max-height: 250px;
   margin-bottom: 8px;
+  max-width: 100%;
+  width: 200px;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
 }
 .konselor-page .konselor-item .konselor-name {
   font-size: 1.25rem;
@@ -559,16 +558,27 @@ body {
   margin: 16px 0;
   font-size: 2.25rem;
 }
-.about-page .about-team .member {
+.about-page .about-team .row {
+  align-items: center;
+}
+.about-page .about-team .row .member {
   margin: 8px;
-  padding: 24px 64px;
+  padding: 24px 32px;
   background-color: #DDD8FF;
   border-radius: 12px;
 }
-.about-page .about-team .member h2 {
+.about-page .about-team .row .member .member-img {
+  width: 140px;
+  max-width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+.about-page .about-team .row .member h2 {
   font-size: 1.75rem;
 }
-.about-page .about-team .member .profile {
+.about-page .about-team .row .member .profile {
   margin-top: 16px;
 }
 

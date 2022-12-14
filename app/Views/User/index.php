@@ -1,5 +1,5 @@
 <!-- halaman index user -->
-<?= $this->extend('layout/user-layout') ?>
+<?= $this->extend('Layout/user-layout') ?>
 
 <?= $this->section('content') ?>
 <main>
@@ -121,7 +121,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="podcast d-flex">
+	<div class="podcast">
 		<div class="container">
 			<div class="podcast-heading">
 				<h1>Dengarkan Kami Lewat Podcast</h1>

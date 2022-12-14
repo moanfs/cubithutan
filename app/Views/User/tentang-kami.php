@@ -1,6 +1,6 @@
 <!-- halaman tentang kami -->
 
-<?= $this->extend('layout/user-layout') ?>
+<?= $this->extend('Layout/user-layout') ?>
 
 <?= $this->section('content') ?>
 
@@ -19,7 +19,7 @@
 						<div class="member">
 							<div class="row">
 								<div class="col-4">
-									<img src="<?= base_url('assets/img/Maharani Lilhawaditsi.jpg'); ?>" class="rounded" width="100" height="120" alt="">
+									<img src="<?= base_url('assets/img/Maharani Lilhawaditsi.jpg'); ?>" class="member-img" />
 								</div>
 								<div class="col-8">
 									<h2>Maharani Lilhawaditsi</h2>
@@ -33,7 +33,7 @@
 						<div class="member">
 							<div class="row">
 								<div class="col-4">
-									<img src="<?= base_url('assets/img/Nabilatuzzahra.jpg'); ?>" class="rounded" width="100" height="120" alt="">
+									<img src="<?= base_url('assets/img/Nabilatuzzahra.jpg'); ?>" class="member-img" />
 								</div>
 								<div class="col-8">
 									<h2>Nabilatuzzahra</h2>
@@ -42,13 +42,12 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 					<div class="col-12 col-md-6">
 						<div class="member">
 							<div class="row">
 								<div class="col-4">
-									<img src="<?= base_url('assets/img/Okta Savira2.png'); ?>" class="rounded" width="100" height="120" alt="">
+									<img src="<?= base_url('assets/img/Okta Savira2.png'); ?>" class="member-img" />
 								</div>
 								<div class="col-8">
 									<h2>Okta Savira</h2>
@@ -62,7 +61,7 @@
 						<div class="member">
 							<div class="row">
 								<div class="col-4">
-									<img src="<?= base_url('assets/img/Sri Hartati.jpg'); ?>" class="rounded" width="100" height="120" alt="">
+									<img src="<?= base_url('assets/img/Sri Hartati.jpg'); ?>" class="member-img" />
 								</div>
 								<div class="col-8">
 									<h2>Sri Hartati</h2>
