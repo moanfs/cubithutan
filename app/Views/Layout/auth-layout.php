@@ -19,22 +19,19 @@
 
 	<?= $this->renderSection('content') ?>
 
-	<!-- <footer class="footer">
+	<footer class="auth-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-3">
-					<a class="footer-link" href="<?= site_url('konseling/online') ?>">Konseling Individual Online</a>
-					<a class="footer-link" href="<?= site_url('konseling/offline') ?>">Konseling Individual Offline</a>
-					<a class="footer-link" href="<?= site_url('curhat') ?>">Curhat</a>
-					<a class="footer-link" href="<?= site_url('podcast') ?>">Podcast</a>
-					<a class="footer-link" href="<?= site_url('materi') ?>">Materi</a>
-
+					<p>Copyright 2022 Cubit Hutan</p>
 				</div>
-				<div class="col-12 col-md-2">
+				<div class="col-12 col-md-3">
 					<a class="footer-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
+				</div>
+				<div class="col-12 col-md-3">
 					<a class="footer-link" href="<?= site_url('kontak') ?>">Kontak</a>
 				</div>
-				<div class="col-12 col-md-2">
+				<div class="col-12 col-md-3">
 					<p>Media Sosial</p>
 					<div>
 						<a href="#">
@@ -51,29 +48,9 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-12 col-md-5 order-md-first">
-					<p>
-						<a href="https://saweria.co/widgets/qr?streamKey=d52ff0c7726d9a97ab18553e0cd5767e">asaasaa</a>
-						Lorem ipsum dolor sit amet consectetur. At gravida tristique proin egestas etiam viverra orci massa. Dolor in hac tortor maecenas venenatis.
-					</p>
-					<div class="footer-img">
-						<a href="<?= site_url('/') ?>">
-							<img src="<?= base_url('assets/img/logo.png') ?>" />
-						</a>
-					</div>
-					<p>Copyright 2022 Cubit Hutan</p>
-				</div>
 			</div>
 		</div>
-	</footer> -->
-
-	<!-- wa chat -->
-
-	<!-- <div class="floating-button">
-		<a href="#">
-			<i class="bi bi-whatsapp"></i>
-		</a>
-	</div> -->
+	</footer>
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>

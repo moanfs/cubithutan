@@ -68,6 +68,10 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->post('profile/update/(:num)/(:segment)', 'Profile::update/$1/$1');
 
     $routes->get('consoler', 'Consoler::index');
+
+    $routes->get('ganti-email', 'Ganti::email');
+    
+    $routes->get('ganti-password', 'Ganti::password');
 });
 
 // --------------------------------------------------------------------
@@ -90,6 +94,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('konselor', 'Konselor::index');
     $routes->get('curhat', 'Curhat::index');
     $routes->get('konseling', 'Konseling::index');
+    $routes->get('ganti-email', 'Ganti::email');
+    $routes->get('ganti-password', 'Ganti::password');
 });
 
 /*

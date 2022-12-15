@@ -449,6 +449,42 @@ body {
 	}
 }
 
+.auth-footer {
+	color: $dark;
+	padding: 8px 0;
+
+	.row {
+		margin: 0;
+		padding: 8px 0;
+		align-items: center;
+		border-top: 1px solid $dark;
+
+		.col-12 {
+			margin-bottom: 8px;
+
+			.footer-link {
+				display: block;
+				color: inherit;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			a { 	
+				color: inherit;
+				margin-right: 8px;
+				text-decoration: none;
+
+				.bi {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
 .modal-profile {
 	.modal-dialog {
 		.modal-body {

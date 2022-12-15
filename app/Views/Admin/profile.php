@@ -35,7 +35,7 @@
                         <div class="col-12 col-md-8">
                             <span><?= $profile['email']; ?></span>
                             <span>
-                                <a href="#">Ganti email</a>
+                                <a href="<?= site_url('admin/ganti-email') ?>">Ganti email</a>
                             </span>
                         </div>
 
@@ -45,7 +45,7 @@
                         <div class="col-12 col-md-8">
                             <span>*********</span>
                             <span>
-                                <a href="#">Ganti kata sandi</a>
+                                <a href="<?= site_url('admin/ganti-password') ?>">Ganti kata sandi</a>
                             </span>
                         </div>
 
