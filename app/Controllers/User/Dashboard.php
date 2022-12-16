@@ -11,7 +11,6 @@ class Dashboard extends BaseController
     {
         $podcast = new PodcastModel();
         $data['podcast'] = $podcast->getIndexPodcast();
-
-        return view('user/index', $data);
+        return view('User/index', $data);
     }
 }

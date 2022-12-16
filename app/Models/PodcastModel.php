@@ -15,7 +15,7 @@ class PodcastModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'name', 'link', 'desc', 'created_at', 'updated_at' . 'deleted_at'
+        'id_episode', 'slug', 'link', 'session', 'created_at', 'updated_at' . 'deleted_at'
     ];
 
     // Dates
@@ -48,9 +48,23 @@ class PodcastModel extends Model
         $this->db->table('podcast')->insert($data_podcast);
     }
 
+    // set episode
+    public function setEpisode($data_episode)
+    {
+        $this->db->table('episode')->insert($data_episode);
+    }
+
+    // get episode
+    public function getEpisode()
+    {
+        return $this->db->table('episode')
+            ->get()->getResultArray();
+    }
+
     public function getpodcast()
     {
         return $this->db->table('podcast')
+            ->join('episode', 'episode.id_epi=podcast.id_episode')
             ->get()->getResultArray();
     }
 
@@ -68,5 +82,22 @@ class PodcastModel extends Model
             ->orderBy('id', 'desc')
             ->limit('3')
             ->get()->getResultArray();
+    }
+
+    // update podcast
+    public function updatePodcast($dataUpdate, $id)
+    {
+        $this->db->table('podcast')
+            ->where('id', $id)
+            ->update($dataUpdate);
+    }
+
+    // get podcast 1
+    public function getPodcastsatu($id)
+    {
+        return $this->db->table('podcast')
+            ->join('episode', 'episode.id_epi=podcast.id_episode')
+            ->where('id', $id)
+            ->get()->getRowArray();
     }
 }

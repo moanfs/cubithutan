@@ -72,20 +72,20 @@
 			</li>
 
 			<!-- Nav Item - Materi -->
-			<li class="nav-item">
+			<!-- <li class="nav-item">
 				<a class="nav-link" href="<?= site_url('admin/konseling') ?>">
 					<i class="fas fa-images"></i>
 					<span>Konseling</span>
 				</a>
-			</li>
+			</li> -->
 
 			<!-- Nav Item - Materi -->
-			<li class="nav-item">
+			<!-- <li class="nav-item">
 				<a class="nav-link" href="<?= site_url('admin/curhat') ?>">
 					<i class="fas fa-images"></i>
 					<span>Curhat</span>
 				</a>
-			</li>
+			</li> -->
 
 			<!-- Divider -->
 			<hr class="sidebar-divider">
@@ -147,7 +147,7 @@
 							</a>
 							<!-- Dropdown - User Information -->
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-								<a class="dropdown-item" href="<?= site_url('admin/profile') ?>">
+								<a class="dropdown-item" href="<?= site_url('admin/profile/') ?>">
 									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 									Profile
 								</a>

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\UserModel;
 
 class Auth extends BaseController
 {
@@ -32,19 +33,18 @@ class Auth extends BaseController
             return redirect()->to('login')->withInput()->with('validation', $validation);
         }
         $query = $this->db->table('users')
-            ->join('auth_user_group', 'auth_user_group.user_id = users.id')
-            ->join('auth_group', 'auth_group.group_id = auth_user_group.user_id')
+            ->join('auth_group', 'auth_group.group_id = users.id_group')
             ->getwhere(['email' => $data['email']]);
         $attempt = $query->getrow();
-        // dd($attempt);
         if ($attempt) {
             if ($attempt->active == 1) {
                 if (password_verify($data['pass_hash'], $attempt->pass_hash)) {
                     $params = ['id' => $attempt->id];
                     $group = ['group' => $attempt->name];
-                    // dd($group);
+                    $slug = ['slug' => $attempt->slug];
                     $this->session->set($params);
                     $this->session->set($group);
+                    $this->session->set($slug);
                     if ($attempt->name == "Admin") {
                         return redirect()->to(site_url('admin'));
                     } else {
@@ -61,6 +61,58 @@ class Auth extends BaseController
         }
     }
 
+
+    public function register()
+    {
+        if (session('id')) {
+            return redirect()->back();
+        }
+        $data['validation'] = \config\Services::validation();
+        return view('register', $data);
+    }
+
+    public function attemptregister()
+    {
+        if (session('id')) {
+            return redirect()->back();
+        }
+        $user = new UserModel();
+        $data = $this->request->getPost();
+        if (!$this->validate([
+            'first_name' => [
+                'rules' => 'required|',
+                'errors' => ['required' => 'Nama depan tidak boleh kosong'],
+            ],
+            'email' => [
+                'rules' => 'required|valid_email|is_unique[users.email]',
+                'errors' => ['required' => 'email tidak boleh kosong', 'valid_email'  => 'Silakan periksa bidang Email. Tampaknya tidak valid', 'is_unique' => 'email sudah terdaftar'],
+            ],
+            'pass_hash' => [
+                'rules' => 'required',
+                'errors' => ['required' => 'password tidak boleh kosong'],
+            ],
+        ])) {
+            $validation = \config\Services::validation();
+            return redirect()->to('register')->withInput()->with('validation', $validation);
+        }
+        $slug = url_title($this->request->getPost('first_name'), '-', true);
+        $user->save([
+            'slug'          => $slug,
+            'first_name'    => $data['first_name'],
+            'last_name'     => $data['last_name'],
+            'email'         => $data['email'],
+            'pass_hash'     => password_hash($data['pass_hash'], PASSWORD_DEFAULT),
+            'id_group'      => '3',
+            'active'        => '1'
+        ]);
+        return redirect()->to('login')->with('success', 'berhasil membuat akun');
+    }
+
+    public function lupaPassword()
+    {
+        return view('lupa_password');
+    }
+
     public function logout()
     {
         session()->remove('id');
@@ -68,15 +120,13 @@ class Auth extends BaseController
     }
 
 
-    public function register()
+    public function email($id, $slug)
     {
-        return view('register');
+        $user = new UserModel();
+        $data['email'] = $user->getUser();
+        return view('ganti-email', $data);
     }
 
-    public function lupaPassword()
-    {
-        return view('lupa_password');
-    }
 
     public function Adminlogout()
     {

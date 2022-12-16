@@ -44,7 +44,11 @@ $routes->get('login', 'Auth::login');
 $routes->get('logout', 'Auth::logout');
 $routes->get('adminlogout', 'Auth::adminlogout');
 $routes->get('register', 'Auth::register');
+$routes->post('register', 'Auth::attemptregister');
 $routes->get('lupa-password', 'Auth::lupaPassword');
+
+// ADMIN
+
 
 $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('/', 'Dashboard::index');
@@ -64,8 +68,12 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
 
     $routes->get('kontak', 'Contact::index');
 
-    $routes->get('profile/(:num)/(:segment)', 'Profile::index/$1/$1');
-    $routes->post('profile/update/(:num)/(:segment)', 'Profile::update/$1/$1');
+    $routes->get('profile', 'Profile::index');
+    $routes->post('profile/update/(:num)', 'Profile::update/$1');
+    $routes->get('ganti-email', 'Profile::email');
+    $routes->post('ganti-email', 'Profile::gantiemail');
+    $routes->get('ganti-password', 'Profile::password');
+    $routes->post('ganti-password', 'Profile::gantipassword');
 
     $routes->get('consoler', 'Consoler::index');
 });
@@ -80,16 +88,34 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('podcast', 'Podcast::index');
     $routes->post('podcast/create', 'Podcast::save');
     $routes->delete('podcast/delete/(:num)', 'Podcast::delete/$1');
+    $routes->get('podcast/edit/(:num)/(:segment)', 'Podcast::setUpdate/$1/$1');
+    $routes->post('podcast/update/(:num)/(:segment)', 'Podcast::update/$1/$1');
+
+    $routes->post('episode/create', 'Podcast::setEpisode');
 
     $routes->get('materi', 'Materi::index');
     $routes->post('materi/create', 'Materi::save');
     $routes->delete('materi/delete/(:num)', 'Materi::delete/$1');
+    $routes->get('materi/edit/(:num)/(:segment)', 'Materi::setUpdate/$1/$1');
 
-    $routes->get('profile', 'Profile::index');
+    $routes->get('profile/', 'Profile::index');
+    $routes->post('profile/update/(:num)', 'Profile::update/$1');
+
     $routes->get('pengguna', 'Pengguna::index');
+    $routes->get('pengguna/edit/(:num)/(:segment)', 'Pengguna::edit/$1/$1');
+    $routes->get('pengguna/update/(:num)/(:segment)', 'Pengguna::update/$1/$1');
+
     $routes->get('konselor', 'Konselor::index');
+    $routes->get('konselor/edit/(:num)/(:segment)', 'Konselor::edit/$1/$1');
+    $routes->get('konselor/update/(:num)/(:segment)', 'Konselor::update/$1/$1');
+
     $routes->get('curhat', 'Curhat::index');
     $routes->get('konseling', 'Konseling::index');
+
+    $routes->get('ganti-email', 'Profile::email');
+    $routes->post('ganti-email', 'Profile::gantiemail');
+    $routes->get('ganti-password', 'Profile::password');
+    $routes->post('ganti-password', 'Profile::gantipassword');
 });
 
 /*

@@ -14,6 +14,15 @@
             <h5>Daftar Pengguna</h5>
         </div>
         <div class="card-body">
+            <?php if (session()->getFlashdata('message')) : ?>
+                <div class="alert alert-success alert-dismissible show fade">
+                    <div class="alert-body">
+                        <button class="close" data-dismiss="alert">X</button>
+                        <b>! Berhasil</b>
+                        <?= session()->getFlashdata('message'); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
             <div class="table-responsive">
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
@@ -34,7 +43,7 @@
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['phone']; ?></td>
                                 <td><?= $value['jenis_klamin']; ?></td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#lihatdetail">Lihat Detail</button></td>
+                                <td><a class="btn btn-primary" href="<?= site_url('admin/pengguna/edit/' . $value['id'] . '/' . $value['slug']); ?>">Lihat Detail</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

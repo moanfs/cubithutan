@@ -8,6 +8,15 @@
 	<div class="container">
 		<div class="profile-page">
 			<div class="row">
+				<?php if (session()->getFlashdata('message')) : ?>
+					<div class="alert alert-success alert-dismissible show fade">
+						<div class="alert-body">
+
+							<b>! Berhasil</b>
+							<?= session()->getFlashdata('message'); ?>
+						</div>
+					</div>
+				<?php endif; ?>
 				<div class="col-12 col-md-4">
 					<div class="card">
 						<div class="card-body profile-img">
@@ -34,7 +43,7 @@
 								<div class="col-12 col-md-8">
 									<span><?= $profile['email']; ?></span>
 									<span>
-										<a href="#">Ganti email</a>
+										<a href="<?= site_url('ganti-email'); ?>">Ganti email</a>
 									</span>
 								</div>
 
@@ -102,21 +111,40 @@
 					<div class="col-12 col-md-12">
 						<div class="modal-form">
 							<h1>Perbarui Profil</h1>
-							<form action="<?= site_url('profile/update/' . $profile['id'] . '/' . $profile['slug']); ?>" method="post" enctype="multipart/form-data">
+							<form action="<?= site_url('profile/update/' . $profile['id']); ?>" method="post" enctype="multipart/form-data">
 								<?= csrf_field() ?>
-								<input class="form-control" value="<?= $profile['first_name']; ?>" name="first_name" type="text" placeholder="nama depan" />
-								<input class="form-control" value="<?= $profile['last_name']; ?>" name="last_name" type="text" placeholder="nama panggilan" />
-								<input class="form-control" value="<?= $profile['phone']; ?>" name="phone" type="text" placeholder="phone" />
-								<input class="form-control" value="<?= $profile['tempat_lahir']; ?>" name="tempat_lahir" type="text" placeholder="tempat lahir" />
-								<input class="form-control" value="<?= $profile['tanggal_lahir']; ?>" name="tanggal_lahir" type="date" placeholder="tanggal lahir" />
-								<select class="form-control" name="jenis_klamin">
-									<option selected disabled>Jenis Kelamin</option>
-									<option value="Laki laki">Laki Laki</option>
-									<option value="Perempuan">Perempuan</option>
-									<option value="lainya">lainya</option>
-								</select>
-								<textarea class="form-control" value="<?= $profile['alamat']; ?>" name="alamat" placeholder="alamat"></textarea>
-
+								<div class="mb-2">
+									<label for="namadepan" class="form-label">Nama Depan</label>
+									<input class="form-control" value="<?= $profile['first_name']; ?>" name="first_name" type="text" />
+								</div>
+								<div class="mb-2">
+									<label for="exampleFormControlTextarea1" class="form-label">Nama Depan</label>
+									<input class="form-control" value="<?= $profile['last_name']; ?>" name="last_name" type="text" />
+								</div>
+								<div class="mb-2">
+									<label for="exampleFormControlTextarea1" class="form-label">WhatsApp</label>
+									<input class="form-control" value="<?= $profile['phone']; ?>" name="phone" type="number" />
+								</div>
+								<div class="mb-2">
+									<label for="exampleFormControlTextarea1" class="form-label">Tempat lahir</label>
+									<input class="form-control" value="<?= $profile['tempat_lahir']; ?>" name="tempat_lahir" type="text" />
+								</div>
+								<div class="mb-2">
+									<label for="exampleFormControlTextarea1" class="form-label">Tanggal Lahir</label>
+									<input class="form-control" value="<?= $profile['tanggal_lahir']; ?>" name="tanggal_lahir" type="date" />
+								</div>
+								<div class="mb-2">
+									<label for="exampleFormControlTextarea1" class="form-label">Jenis Kelamin</label>
+									<select class="form-control" name="jenis_klamin">
+										<option value="Laki laki" <?php if ($profile['jenis_klamin'] == 'Laki laki') : ?>selected <?php endif; ?>>Laki Laki</option>
+										<option value="Perempuan" <?php if ($profile['jenis_klamin'] == 'Perempuan') : ?>selected <?php endif; ?>>Perempuan</option>
+										<option value="lainya" <?php if ($profile['jenis_klamin'] == 'lainya') : ?>selected <?php endif; ?>>lainya</option>
+									</select>
+								</div>
+								<div class="mb-2">
+									<label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+									<input class="form-control" value="<?= $profile['alamat']; ?>" name="alamat" placeholder="alamat">
+								</div>
 								<div class="form-button">
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<button class="btn btn-danger" data-bs-dismiss="modal">Batal</button>

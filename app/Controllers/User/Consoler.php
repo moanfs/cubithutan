@@ -9,9 +9,8 @@ class Consoler extends BaseController
 {
     public function index()
     {
-        //
         $consoler = new UserModel();
-        $data['consoler'] = $consoler->getAllKonsoler();
-        return view('user/consoler', $data);
+        $data['consoler'] = $consoler->getAllKonsolerUser();
+        return view('User/consoler', $data);
     }
 }

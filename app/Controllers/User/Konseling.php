@@ -8,10 +8,10 @@ class Konseling extends BaseController
 {
     public function online()
     {
-        return view('user/konseling-online');
+        return view('User/konseling-online');
     }
     public function offline()
     {
-        return view('user/konseling-offline');
+        return view('User/konseling-offline');
     }
 }

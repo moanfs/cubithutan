@@ -74,7 +74,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-item">
-									<a class="nav-link" href="<?= site_url('profile/' . userlogin()->id . '/' . userlogin()->slug); ?>">Profil Saya</a>
+									<a class="nav-link" href="<?= site_url('profile/'); ?>">Profil Saya</a>
 								</li>
 								<li class="dropdown-item">
 									<a class="nav-link" href="<?= site_url('logout'); ?>">Logout</a>
@@ -107,16 +107,13 @@
 				<div class="col-12 col-md-2">
 					<p>Media Sosial</p>
 					<div>
-						<a href="#">
+						<a href="https://instagram.com/cubithutan_?igshid=NDk5N2NlZjQ=">
 							<i class="bi bi-instagram"></i>
 						</a>
-						<a href="#">
+						<a href="https://twitter.com/CubitHutan">
 							<i class="bi bi-twitter"></i>
 						</a>
-						<a href="#">
-							<i class="bi bi-whatsapp"></i>
-						</a>
-						<a href="#">
+						<a href="https://open.spotify.com/show/6JAP3DCWjl3Rf36YqqUfZF?si=kTtFJReTTiGw6ii-WL9O0A&utm_source=copy-link">
 							<i class="bi bi-spotify"></i>
 						</a>
 					</div>
@@ -135,14 +132,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<!-- wa chat -->
-
-	<!-- <div class="floating-button">
-		<a href="">
-			<i class="bi bi-whatsapp"></i>
-		</a>
-	</div> -->
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>

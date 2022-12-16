@@ -8,26 +8,31 @@
 	<div class="container">
 		<div class="contact-page">
 			<h1>Hubungi Kami</h1>
-			<p>Lorem ipsum dolor sit amet consectetur. Libero malesuada sollicitudin eget dignissim urna. Est posuere pellentesque sit sed. Condimentum eros nunc sapien molestie adipiscing tincidunt enim enim.</p>
 			<div class="contact-item">
 				<i class="bi bi-whatsapp"></i>
-				<span>081234567890</span>
+				<span><?= kontak()->phone; ?></span>
 			</div>
 			<div class="contact-item">
 				<i class="bi bi-envelope-at"></i>
-				<span>cubit@hutan.com</span>
+				<span><?= kontak()->email; ?></span>
 			</div>
 			<h1>Media Sosial</h1>
 			<div class="contact-item">
-				<i class="bi bi-instagram"></i>
-				<span>@cubit_hutan</span>
+				<a href="https://instagram.com/cubithutan_?igshid=NDk5N2NlZjQ=">
+					<i class="bi bi-instagram"></i>
+				</a>
+				<span>@cubithutan_</span>
 			</div>
 			<div class="contact-item">
-				<i class="bi bi-twitter"></i>
-				<span>@cubit_hutan</span>
+				<a href="https://twitter.com/CubitHutan">
+					<i class="bi bi-twitter"></i>
+				</a>
+				<span>@CubitHutan</span>
 			</div>
 			<div class="contact-item">
-				<i class="bi bi-spotify"></i>
+				<a href="https://open.spotify.com/show/6JAP3DCWjl3Rf36YqqUfZF?si=kTtFJReTTiGw6ii-WL9O0A&utm_source=copy-link">
+					<i class="bi bi-spotify"></i>
+				</a>
 				<span>Cubit Hutan</span>
 			</div>
 

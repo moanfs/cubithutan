@@ -4,10 +4,10 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
-class Konseling extends BaseController
+class Episode extends BaseController
 {
     public function index()
     {
-        return view('Admin/konseling');
+        //
     }
 }

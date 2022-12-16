@@ -8,6 +8,6 @@ class About extends BaseController
 {
     public function index()
     {
-        return view('user/tentang-kami');
+        return view('User/tentang-kami');
     }
 }

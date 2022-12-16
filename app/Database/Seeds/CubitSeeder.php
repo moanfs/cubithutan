@@ -28,6 +28,7 @@ class CubitSeeder extends Seeder
         $this->db->table('auth_group')->insert($data);
 
         $data = [
+            'id_group' => '1',
             'slug' => 'cubit-hutan',
             'email'    => 'cubithutan@gmail.com',
             'first_name' => 'Cubit',
@@ -37,6 +38,7 @@ class CubitSeeder extends Seeder
         ];
         $this->db->table('users')->insert($data);
         $data = [
+            'id_group' => '2',
             'slug' => 'consoler',
             'email'    => 'consoler@mail.com',
             'first_name' => 'Consoler',
@@ -46,6 +48,7 @@ class CubitSeeder extends Seeder
         ];
         $this->db->table('users')->insert($data);
         $data = [
+            'id_group' => '3',
             'slug' => 'user',
             'email'    => 'user@mail.com',
             'first_name' => 'User',
@@ -55,20 +58,20 @@ class CubitSeeder extends Seeder
         ];
         $this->db->table('users')->insert($data);
 
-        $data = [
-            'group_id' => '1',
-            'user_id' => '1'
-        ];
-        $this->db->table('auth_user_group')->insert($data);
-        $data = [
-            'group_id' => '2',
-            'user_id' => '2'
-        ];
-        $this->db->table('auth_user_group')->insert($data);
-        $data = [
-            'group_id' => '3',
-            'user_id' => '3'
-        ];
-        $this->db->table('auth_user_group')->insert($data);
+        // $data = [
+        //     'group_id' => '1',
+        //     'user_id' => '1'
+        // ];
+        // $this->db->table('auth_user_group')->insert($data);
+        // $data = [
+        //     'group_id' => '2',
+        //     'user_id' => '2'
+        // ];
+        // $this->db->table('auth_user_group')->insert($data);
+        // $data = [
+        //     'group_id' => '3',
+        //     'user_id' => '3'
+        // ];
+        // $this->db->table('auth_user_group')->insert($data);
     }
 }

@@ -11,6 +11,6 @@ class Podcast extends BaseController
     {
         $podcast = new PodcastModel();
         $data['podcast'] = $podcast->getpodcast();
-        return view('user/podcast', $data);
+        return view('User/podcast', $data);
     }
 }

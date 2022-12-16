@@ -484,6 +484,7 @@ body {
 }
 .konseling-page .konseling-tab .tab-content p {
   margin-bottom: 8px;
+  text-align: justify;
 }
 
 .podcast-page {

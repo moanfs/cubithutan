@@ -15,7 +15,7 @@ class UserModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'username', 'first_name', 'last_name', 'email', 'pass_hash', 'phone', 'tempat_lahir', 'tanggal_lahir', 'jenis_klamin', 'alamat',
+        'slug', 'username', 'id_group', 'first_name', 'last_name', 'email', 'pass_hash', 'phone', 'tempat_lahir', 'tanggal_lahir', 'jenis_klamin', 'alamat',
         'img_profile', 'active', 'created_at', 'updated_at', 'deleted_at'
     ];
 
@@ -36,28 +36,41 @@ class UserModel extends Model
     public function getAllPengguna()
     {
         return $this->db->table('users')
-            ->join('auth_user_group', 'auth_user_group.user_id=users.id')
-            ->join('auth_group', 'auth_group.group_id=auth_user_group.group_id')
+            ->join('auth_group', 'auth_group.group_id=users.id_group')
             ->where('auth_group.group_id', '3')
             ->get()->getResultArray();
     }
 
-    // consoler cubit hutan
+    // consoler cubit hutan admin
     public function getAllKonsoler()
     {
         return $this->db->table('users')
-            ->join('auth_user_group', 'auth_user_group.user_id=users.id')
-            ->join('auth_group', 'auth_group.group_id=auth_user_group.group_id')
+            ->join('auth_group', 'auth_group.group_id=users.id_group')
+            ->where('auth_group.group_id', '2')
+            ->get()->getResultArray();
+    }
+
+    // consoler cubit hutan user
+    public function getAllKonsolerUser()
+    {
+        return $this->db->table('users')
+            ->join('auth_group', 'auth_group.group_id=users.id_group')
             ->where('auth_group.group_id', '2')
             ->where('active_consoler', '1')
             ->get()->getResultArray();
     }
 
+    public function getPengguna($id)
+    {
+        return $this->db->table('users')
+            ->join('auth_group', 'auth_group.group_id=users.id_group')
+            ->where('id', $id)
+            ->get()->getRowArray();
+    }
     public function getUser()
     {
         return $this->db->table('users')
-            ->join('auth_user_group', 'auth_user_group.user_id=users.id')
-            ->join('auth_group', 'auth_group.group_id=auth_user_group.group_id')
+            ->join('auth_group', 'auth_group.group_id=users.id_group')
             ->where('id', session('id'))
             ->get()->getRowArray();
     }
@@ -67,5 +80,11 @@ class UserModel extends Model
         $this->db->table('users')
             ->where('id', session('id'))
             ->update($dataUpdate);
+    }
+
+    public function getRole()
+    {
+        return $this->db->table('auth_group')
+            ->get()->getResultArray();
     }
 }

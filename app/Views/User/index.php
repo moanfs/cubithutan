@@ -94,9 +94,9 @@
 				<div class="col-12 col-md-4">
 					<div class="card">
 						<div class="card-body">
-							<i class="bi bi-journal-bookmark-fill"></i>
-							<h2>1. Pilih Topik Permasalahan</h2>
-							<p>Cat ipsum dolor sit amet, snuggles up to shoulders or knees and purrs you to sleep. Stand with legs in litter box </p>
+							<i class="bi bi-browser-safari"></i>
+							<p>1. Buka website CuBit HuTan</p>
+							<p></p>
 						</div>
 					</div>
 				</div>
@@ -104,8 +104,7 @@
 					<div class="card">
 						<div class="card-body">
 							<i class="bi bi-send-fill"></i>
-							<h2>2. Hubungi Cubit Hutan</h2>
-							<p>Cat ipsum dolor sit amet, snuggles up to shoulders or knees and purrs you to sleep. Stand with legs in litter box </p>
+							<p>2. Pilih fitur "konseling" yang ada di website CuBit HuTan</p>
 						</div>
 					</div>
 				</div>
@@ -113,8 +112,31 @@
 					<div class="card">
 						<div class="card-body">
 							<i class="bi bi-chat-left-quote-fill"></i>
-							<h2>3. Mulai Konsultasi</h2>
-							<p>Cat ipsum dolor sit amet, snuggles up to shoulders or knees and purrs you to sleep. Stand with legs in litter box </p>
+							<p>3. Pilihan disesuaikan pengguna ingin melakukan konseling secara online atau offline</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<i class="bi bi-whatsapp"></i>
+							<p>4. Setelah itu, nanti akan diarahkan ke whatsapp admin CuBit HuTan untuk menanyakan jadwal pelaksanaan</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<i class="bi bi-calendar-day"></i>
+							<p>5. Setelah penentuan jadwal pelaksanaan konseling, konseli bisa menceritakan masalah yang ingin di konseling kan ecara garis besarnya dulu</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<i class="bi bi-people"></i>
+							<p>6. Setelah itu baru konseli atau pengguna bisa melakukan konseling sesuai jadwal yang telah disepakati</p>
 						</div>
 					</div>
 				</div>

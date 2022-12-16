@@ -8,6 +8,6 @@ class Curhat extends BaseController
 {
     public function index()
     {
-        return view('user/curhat');
+        return view('User/curhat');
     }
 }
