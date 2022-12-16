@@ -1,4 +1,4 @@
-<!-- halaman login -->
+<!-- halaman lupa password -->
 
 <?= $this->extend('Layout/auth-layout') ?>
 

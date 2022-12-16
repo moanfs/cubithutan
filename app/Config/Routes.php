@@ -76,6 +76,10 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->post('ganti-password', 'Profile::gantipassword');
 
     $routes->get('consoler', 'Consoler::index');
+
+    $routes->get('ganti-email', 'Ganti::email');
+
+    $routes->get('ganti-password', 'Ganti::password');
 });
 
 // --------------------------------------------------------------------

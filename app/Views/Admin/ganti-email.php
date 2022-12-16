@@ -5,6 +5,7 @@
 <?= $this->section('content') ?>
 
 <main>
+
     <div class="container">
         <div class="auth-page">
             <div class="row justify-content-center">
@@ -32,6 +33,6 @@
             </div>
         </div>
     </div>
-</main>
 
-<?= $this->endSection() ?>
+
+    <?= $this->endSection() ?>

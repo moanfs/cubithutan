@@ -53,7 +53,7 @@
 								<div class="col-12 col-md-8">
 									<span>*********</span>
 									<span>
-										<a href="#">Ganti kata sandi</a>
+										<a href="<?= site_url('ganti-password') ?>">Ganti kata sandi</a>
 									</span>
 								</div>
 

@@ -32,6 +32,7 @@
             </div>
         </div>
     </div>
+
 </main>
 
 <?= $this->endSection() ?>

@@ -16,79 +16,43 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg fixed-top">
-		<div class="container">
-			<a class="navbar-brand" href="<?= site_url('/') ?>">
-				<img src="<?= base_url('assets/img/logo.png') ?>" />
-			</a>
-
-			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarMain">
-				<ul class="navbar-nav mx-auto">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Peer Konseling
-						</a>
-						<ul class="dropdown-menu">
-							<li class="dropdown-item">
-								<a class="nav-link" href="<?= site_url('konseling/online') ?>">Individual Online</a>
-							</li>
-							<li class="dropdown-item">
-								<a class="nav-link" href="<?= site_url('konseling/offline') ?>">Individual Offline</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('curhat') ?>">Curhat</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('podcast') ?>">Podcast</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('materi') ?>">Materi</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('consoler') ?>">Konselor</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('kontak') ?>">Kontak</a>
-					</li>
-				</ul>
-
-				<div class="navbar-right">
-					<?php if (!session('id')) : ?>
-						<!-- sebelum login -->
-						<button class="nav-button"><a href="<?= site_url('login') ?>">Masuk</a></button>
-					<?php else : ?>
-						<!-- setelah login -->
-						<img src="<?= base_url('assets/img/avatar.png') ?>" />
-						<div class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-								<?= userlogin()->first_name; ?>
-							</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-item">
-									<a class="nav-link" href="<?= site_url('profile/' . userlogin()->id . '/' . userlogin()->slug); ?>">Profil Saya</a>
-								</li>
-								<li class="dropdown-item">
-									<a class="nav-link" href="<?= site_url('logout'); ?>">Logout</a>
-								</li>
-							</ul>
-						</div>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	</nav>
 
 	<!-- this content -->
 	<?= $this->renderSection('content') ?>
+
+
+	<footer class="auth-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-3">
+					<p>Copyright 2022 Cubit Hutan</p>
+				</div>
+				<div class="col-12 col-md-3">
+					<a class="footer-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
+				</div>
+				<div class="col-12 col-md-3">
+					<a class="footer-link" href="<?= site_url('kontak') ?>">Kontak</a>
+				</div>
+				<div class="col-12 col-md-3">
+					<p>Media Sosial</p>
+					<div>
+						<a href="#">
+							<i class="bi bi-instagram"></i>
+						</a>
+						<a href="#">
+							<i class="bi bi-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="bi bi-whatsapp"></i>
+						</a>
+						<a href="#">
+							<i class="bi bi-spotify"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
