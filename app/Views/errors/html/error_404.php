@@ -3,78 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>404 Page Not Found</title>
+    <title>404 Halaman Tidak Ditemukan</title>
 
     <style>
-        /* div.logo {
-            height: 200px;
-            width: 155px;
-            display: inline-block;
-            opacity: 0.08;
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            margin-left: -73px;
-        }
-
-        body {
-            height: 100%;
-            background: #fafafa;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #777;
-            font-weight: 300;
-        }
-
-        h1 {
-            font-weight: lighter;
-            letter-spacing: normal;
-            font-size: 3rem;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: #222;
-        }
-
-        .wrap {
-            max-width: 1024px;
-            margin: 5rem auto;
-            padding: 2rem;
-            background: #fff;
-            text-align: center;
-            border: 1px solid #efefef;
-            border-radius: 0.5rem;
-            position: relative;
-        }
-
-        pre {
-            white-space: normal;
-            margin-top: 1.5rem;
-        }
-
-        code {
-            background: #fafafa;
-            border: 1px solid #efefef;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            display: block;
-        }
-
-        p {
-            margin-top: 1.5rem;
-        }
-
-        .footer {
-            margin-top: 2rem;
-            border-top: 1px solid #efefef;
-            padding: 1em 2em 0 2em;
-            font-size: 85%;
-            color: #999;
-        }
-
-        a:active,
-        a:link,
-        a:visited {
-            color: #fafafa;
-        } */
 
         @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
         @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
@@ -99,7 +30,7 @@
             background:
                 linear-gradient(140deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 43%, transparent 44%, transparent 100%),
                 linear-gradient(105deg, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.06) 41%, rgba(0, 0, 0, 0.07) 76%, transparent 77%, transparent 100%),
-                linear-gradient(to right, #d89ca4, #e27b7e);
+                linear-gradient(to right, #6C4AB6, #6143A4);
         }
 
         .error-container>span.four:before,
@@ -118,7 +49,7 @@
             background:
                 linear-gradient(128deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 40%, transparent 41%, transparent 100%),
                 linear-gradient(116deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 50%, transparent 51%, transparent 100%),
-                linear-gradient(to top, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
+                linear-gradient(to top, #7B5CBD, #896EC5, #9880CC, #A792D3, #B6A5DB);
         }
 
         .error-container>span.four:after {
@@ -127,7 +58,7 @@
             transform: rotate(-49.5deg);
             left: -18px;
             bottom: 36px;
-            background: linear-gradient(to right, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
+            background: linear-gradient(to right, #7B5CBD, #896EC5, #9880CC, #A792D3, #B6A5DB);
         }
 
         .error-container>span.zero {
@@ -136,7 +67,7 @@
             height: 156px;
             border-radius: 999px;
             background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.06) 50%, transparent 51%, transparent 100%),
-                linear-gradient(to top right, #99749D, #99749D, #B895AB, #CC9AA6, #D7969E, #ED8687, #ED8687);
+                linear-gradient(to top right, #7B5CBD, #896EC5, #9880CC, #A792D3, #B6A5DB, #C4B7E2, #D3C9E9);
             overflow: hidden;
             animation: bgshadow 5s infinite;
         }
@@ -224,6 +155,7 @@
             margin: 30px auto 30px;
             font-size: 19px;
             text-align: center;
+            color: #292B2C;
         }
 
         .link-container {
@@ -233,7 +165,7 @@
         a.more-link {
             text-transform: uppercase;
             font-size: 13px;
-            background-color: #de7e85;
+            background-color: #6C4AB6;
             padding: 10px 15px;
             border-radius: 15px;
             color: #fff;
@@ -250,7 +182,6 @@
 
 <body>
     <div class="wrap">
-        <!-- <h1>404 Error Page</h1> -->
         <p>
             <?php if (ENVIRONMENT !== 'production') : ?>
                 <?= nl2br(esc($message)) ?>
@@ -260,7 +191,7 @@
             <span class="zero"><span class="screen-reader-text">0</span></span>
             <span class="four"><span class="screen-reader-text">4</span></span>
         </section>
-        <p class="zoom-area"><b>!Maaf</b> halaman yang anda cari tidak ditemukan</p>
+        <p class="zoom-area"><b>!Maaf,</b> halaman yang anda cari tidak ditemukan</p>
         <div class="link-container">
             <a href="<?= site_url('/'); ?>" class="more-link">Kembali ke cubit hutan</a>
         </div>

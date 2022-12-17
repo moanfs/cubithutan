@@ -512,6 +512,7 @@ body {
 }
 .konseling-page .konseling-tujuan p {
   margin-bottom: 8px;
+  color: #6C4AB6;
 }
 
 .podcast-page {
@@ -539,7 +540,7 @@ body {
   font-size: 2.25rem;
 }
 .materi-page .materi-poster {
-  margin-top: 16px;
+  margin-top: 8px;
   margin-left: 0;
   margin-right: 0;
   display: flex;
@@ -549,7 +550,7 @@ body {
 .materi-page .materi-poster .materi-img {
   margin: 16px;
   width: 300px;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
 }
 

@@ -610,6 +610,7 @@ body {
 
 		p {
 			margin-bottom: 8px;
+			color: $purple-darker;
 		}
 	}
 }
@@ -645,7 +646,7 @@ body {
 	}
 
 	.materi-poster {
-		margin-top: 16px;
+		margin-top: 8px;
 		margin-left: 0;
 		margin-right: 0;
 		display: flex;
@@ -655,10 +656,8 @@ body {
 		.materi-img {
 			margin: 16px;
 			width: 300px;
-			max-width: 100%;
+			max-width: 90%;
 			height: auto;
-
-
 		}
 	}
 }
