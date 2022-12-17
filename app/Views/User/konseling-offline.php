@@ -1,5 +1,9 @@
 <!-- halaman konseling individual offline -->
 <?= $this->extend('Layout/user-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Konseling Offline &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
 <?= $this->section('content') ?>
 <main>

@@ -29,49 +29,33 @@ class CubitSeeder extends Seeder
 
         $data = [
             'id_group' => '1',
-            'slug' => 'cubit-hutan',
+            'slug' => 'Cubit-Hutan',
             'email'    => 'cubithutan@gmail.com',
-            'first_name' => 'Cubit',
-            'last_name' => 'Hutan',
+            'fullname' => 'Cubit Hutan',
+            'callname' => 'cuhut',
             'active'    => '1',
             'pass_hash' => password_hash('12345', PASSWORD_DEFAULT)
         ];
         $this->db->table('users')->insert($data);
         $data = [
             'id_group' => '2',
-            'slug' => 'consoler',
+            'slug' => 'Consoler-Pertama',
             'email'    => 'consoler@mail.com',
-            'first_name' => 'Consoler',
-            'last_name' => 'Pertama',
+            'fullname' => 'Consoler Pertama',
+            'callname' => 'consoler',
             'active'    => '1',
             'pass_hash' => password_hash('12345', PASSWORD_DEFAULT)
         ];
         $this->db->table('users')->insert($data);
         $data = [
             'id_group' => '3',
-            'slug' => 'user',
+            'slug' => 'User-Coba',
             'email'    => 'user@mail.com',
-            'first_name' => 'User',
-            'last_name' => 'Coba',
+            'fullname' => 'User Coba',
+            'callname' => 'coba',
             'active'    => '1',
             'pass_hash' => password_hash('12345', PASSWORD_DEFAULT)
         ];
         $this->db->table('users')->insert($data);
-
-        // $data = [
-        //     'group_id' => '1',
-        //     'user_id' => '1'
-        // ];
-        // $this->db->table('auth_user_group')->insert($data);
-        // $data = [
-        //     'group_id' => '2',
-        //     'user_id' => '2'
-        // ];
-        // $this->db->table('auth_user_group')->insert($data);
-        // $data = [
-        //     'group_id' => '3',
-        //     'user_id' => '3'
-        // ];
-        // $this->db->table('auth_user_group')->insert($data);
     }
 }

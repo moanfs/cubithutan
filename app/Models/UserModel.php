@@ -15,8 +15,8 @@ class UserModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'slug', 'username', 'id_group', 'first_name', 'last_name', 'email', 'pass_hash', 'phone', 'tempat_lahir', 'tanggal_lahir', 'jenis_klamin', 'alamat',
-        'img_profile', 'active', 'created_at', 'updated_at', 'deleted_at'
+        'id_group', 'slug', 'fullname', 'callname', 'email', 'phone', 'pendidikan', 'agama',  'anakke',  'tempat_lahir', 'tanggal_lahir',  'jenis_klamin',
+        'alamat', 'pass_hash', 'img_profile', 'active', 'kuliah', 'active_consoler', 'desc_consoler', 'profile_consoler', 'created_at', 'updated_at', 'deleted_at'
     ];
 
     // Dates
@@ -73,18 +73,5 @@ class UserModel extends Model
             ->join('auth_group', 'auth_group.group_id=users.id_group')
             ->where('id', session('id'))
             ->get()->getRowArray();
-    }
-
-    public function updateProfileUser($dataUpdate)
-    {
-        $this->db->table('users')
-            ->where('id', session('id'))
-            ->update($dataUpdate);
-    }
-
-    public function getRole()
-    {
-        return $this->db->table('auth_group')
-            ->get()->getResultArray();
     }
 }

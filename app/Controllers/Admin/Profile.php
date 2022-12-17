@@ -19,14 +19,15 @@ class Profile extends BaseController
 
         $profile  = new UserModel();
         $data = $this->request->getPost();
-        // dd($id);
-        $slug = url_title($this->request->getPost('first_name'), '-', true);
+        $phone = $data['phone'];
+        $phone = substr($phone, 1);
+        $slug = url_title($this->request->getPost('fullname'), '-', true);
         $profile->save([
             'id'            => $id,
             'slug'          => $slug,
-            'first_name'    => $data['first_name'],
-            'last_name'     => $data['last_name'],
-            'phone'         => $data['phone'],
+            'fullname'    => $data['fullname'],
+            'callname'     => $data['callname'],
+            'phone'         => $phone,
             'tempat_lahir'  => $data['tempat_lahir'],
             'tanggal_lahir' => $data['tanggal_lahir'],
             'jenis_klamin'  => $this->request->getVar('jenis_klamin'),

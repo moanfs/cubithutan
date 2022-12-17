@@ -1,5 +1,9 @@
 <!-- halaman index user -->
 <?= $this->extend('Layout/user-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
 <?= $this->section('content') ?>
 <main>

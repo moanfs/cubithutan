@@ -1,6 +1,9 @@
 <!-- halaman tentang kami -->
-
 <?= $this->extend('Layout/user-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Tentang Kami &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
 <?= $this->section('content') ?>
 

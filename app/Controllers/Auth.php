@@ -54,7 +54,7 @@ class Auth extends BaseController
                     return redirect()->back()->with('message', 'email atau password anda salah');
                 }
             } else {
-                return redirect()->back()->with('error', 'email belum aktif');
+                return redirect()->back()->with('message', 'email belum aktif');
             }
         } else {
             return redirect()->back()->with('message', 'email atau password anda salah');
@@ -79,27 +79,38 @@ class Auth extends BaseController
         $user = new UserModel();
         $data = $this->request->getPost();
         if (!$this->validate([
-            'first_name' => [
+            'fullname' => [
                 'rules' => 'required|',
-                'errors' => ['required' => 'Nama depan tidak boleh kosong'],
+                'errors' => ['required' => 'Nama lengkap tidak boleh kosong'],
+            ],
+            'callname' => [
+                'rules' => 'required|',
+                'errors' => ['required' => 'Nama panggilan tidak boleh kosong'],
             ],
             'email' => [
                 'rules' => 'required|valid_email|is_unique[users.email]',
                 'errors' => ['required' => 'email tidak boleh kosong', 'valid_email'  => 'Silakan periksa bidang Email. Tampaknya tidak valid', 'is_unique' => 'email sudah terdaftar'],
             ],
+            'phone' => [
+                'rules' => 'required|whatsapp_valid[phone]',
+                'errors' => ['required' => 'no whatsapp tidak boleh kosong'],
+            ],
             'pass_hash' => [
-                'rules' => 'required',
+                'rules' => 'required|password_strength[6]',
                 'errors' => ['required' => 'password tidak boleh kosong'],
             ],
         ])) {
             $validation = \config\Services::validation();
             return redirect()->to('register')->withInput()->with('validation', $validation);
         }
-        $slug = url_title($this->request->getPost('first_name'), '-', true);
+        $phone = $data['phone'];
+        $phone = substr($phone, 1);
+        $slug = url_title($this->request->getPost('fullname'), '-', true);
         $user->save([
             'slug'          => $slug,
-            'first_name'    => $data['first_name'],
-            'last_name'     => $data['last_name'],
+            'fullname'      => $data['fullname'],
+            'callname'      => $data['callname'],
+            'phone'         => $phone,
             'email'         => $data['email'],
             'pass_hash'     => password_hash($data['pass_hash'], PASSWORD_DEFAULT),
             'id_group'      => '3',

@@ -1,9 +1,12 @@
 <!-- halaman login -->
-
 <?= $this->extend('Layout/auth-layout') ?>
 
-<?= $this->section('content') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Login &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
+<?= $this->section('content') ?>
 <main>
 	<div class="container">
 		<div class="auth-page mt-5">
@@ -19,13 +22,6 @@
 								<div class="alert alert-danger alert-dismissible show fade">
 									<div class="alert-body">
 										<?= session()->getFlashdata('message'); ?>
-									</div>
-								</div>
-							<?php endif; ?>
-							<?php if (session()->getFlashdata('error')) : ?>
-								<div class="alert alert-danger alert-dismissible show fade">
-									<div class="alert-body">
-										<?= session()->getFlashdata('error'); ?>
 									</div>
 								</div>
 							<?php endif; ?>

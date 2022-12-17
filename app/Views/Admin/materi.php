@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="modal-form">
-                            <h1>Form Tambah Podcast</h1>
+                            <h1>Form Tambah Materi</h1>
                             <form action="<?= site_url('admin/materi/create'); ?>" method="POST" enctype="multipart/form-data">
                                 <?= csrf_field() ?>
                                 <div class="mb-3">

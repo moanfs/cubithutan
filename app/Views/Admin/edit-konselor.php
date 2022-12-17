@@ -13,8 +13,12 @@
         <div class="card-body">
             <form action="" method="post">
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Nama Pengguna</label>
-                    <input type="text" class="form-control" name="link" id="session" value="<?= $konselor['first_name']; ?> <?= $konselor['last_name']; ?>" readonly>
+                    <label for="exampleFormControlTextarea1" class="form-label">Nama Konselor</label>
+                    <input type="text" class="form-control" name="link" id="session" value="<?= $konselor['fullname']; ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Nama Panggilan</label>
+                    <input type="text" class="form-control" name="link" id="session" value="<?= $konselor['callname']; ?>" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Email</label>
@@ -23,6 +27,10 @@
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">WhatsApp</label>
                     <input type="text" class="form-control" name="link" id="session" value="<?= $konselor['phone']; ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Pendidikan</label>
+                    <input type="text" class="form-control" name="link" id="session" value="<?= $konselor['pendidikan']; ?>" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Jenis Klamin</label>

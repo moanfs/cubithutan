@@ -4,7 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cubit Hutan</title>
+	<!-- title -->
+	<?= $this->renderSection('title'); ?>
+
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style.css') ?>">
 	<!-- bootstrap icon -->
@@ -21,11 +23,9 @@
 			<a class="navbar-brand" href="<?= site_url('/') ?>">
 				<img src="<?= base_url('assets/img/logo.png') ?>" />
 			</a>
-
 			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMain">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
 			<div class="collapse navbar-collapse" id="navbarMain">
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item dropdown">
@@ -51,10 +51,10 @@
 						<a class="nav-link" href="<?= site_url('materi') ?>">Materi</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
+						<a class="nav-link" href="<?= site_url('consoler') ?>">Konselor</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= site_url('consoler') ?>">Konselor</a>
+						<a class="nav-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="<?= site_url('kontak') ?>">Kontak</a>
@@ -67,15 +67,21 @@
 						<button class="nav-button"><a href="<?= site_url('login') ?>">Masuk</a></button>
 					<?php else : ?>
 						<!-- setelah login -->
-						<img src="<?= base_url('assets/img/avatar.png') ?>" />
+						<img src="<?= base_url('assets/profile/' . userlogin()->img_profile) ?>" width="38" class="rounded-circle" />
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-								<?= userlogin()->first_name; ?>
+								<?= userlogin()->callname; ?>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-item">
 									<a class="nav-link" href="<?= site_url('profile/'); ?>">Profil Saya</a>
 								</li>
+								<?php if (userlogin()->id_group == 2) : ?>
+									<li class="dropdown-item">
+										<a class="nav-link" href="<?= site_url('profile/konselor'); ?>">Profile Konselor</a>
+									</li>
+								<?php endif; ?>
+								<div class="dropdown-divider"></div>
 								<li class="dropdown-item">
 									<a class="nav-link" href="<?= site_url('logout'); ?>">Logout</a>
 								</li>
@@ -107,13 +113,13 @@
 				<div class="col-12 col-md-2">
 					<p>Media Sosial</p>
 					<div>
-						<a href="https://instagram.com/cubithutan_?igshid=NDk5N2NlZjQ=">
+						<a href="https://instagram.com/cubithutan_?igshid=NDk5N2NlZjQ=" target="_blank">
 							<i class="bi bi-instagram"></i>
 						</a>
-						<a href="https://twitter.com/CubitHutan">
+						<a href="https://twitter.com/CubitHutan" target="_blank">
 							<i class="bi bi-twitter"></i>
 						</a>
-						<a href="https://open.spotify.com/show/6JAP3DCWjl3Rf36YqqUfZF?si=kTtFJReTTiGw6ii-WL9O0A&utm_source=copy-link">
+						<a href="https://open.spotify.com/show/6JAP3DCWjl3Rf36YqqUfZF?si=kTtFJReTTiGw6ii-WL9O0A&utm_source=copy-link" target="_blank">
 							<i class="bi bi-spotify"></i>
 						</a>
 					</div>
@@ -127,7 +133,7 @@
 						<img src="<?= base_url('assets/img/saweria.jpg') ?>" width="140" />
 					</a>
 					<!-- </div> -->
-					<p class="mt-2">Copyright 2022 Cubit Hutan</p>
+					<p class="mt-2">&copy; Cubit Hutan <?= date('Y') ?></p>
 				</div>
 			</div>
 		</div>

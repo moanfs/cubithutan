@@ -47,9 +47,6 @@ $routes->get('register', 'Auth::register');
 $routes->post('register', 'Auth::attemptregister');
 $routes->get('lupa-password', 'Auth::lupaPassword');
 
-// ADMIN
-
-
 $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
     $routes->get('/', 'Dashboard::index');
 
@@ -70,16 +67,17 @@ $routes->group('', ['namespace' => 'App\Controllers\User'], function ($routes) {
 
     $routes->get('profile', 'Profile::index');
     $routes->post('profile/update/(:num)', 'Profile::update/$1');
+    $routes->post('profile/ganti-foto/(:num)', 'Profile::gantifoto/$1');
     $routes->get('ganti-email', 'Profile::email');
     $routes->post('ganti-email', 'Profile::gantiemail');
     $routes->get('ganti-password', 'Profile::password');
-    $routes->post('ganti-password', 'Profile::gantipassword');
+    $routes->post('ganti-password/(:num)', 'Profile::gantipassword/$1');
+
+    $routes->get('profile/konselor', 'ProfileKonsoler::index');
+    $routes->post('profile/konselor/update/(:num)', 'ProfileKonsoler::update/$1');
+    $routes->post('profile/konsoler/ganti-foto/(:num)', 'ProfileKonsoler::gantifoto/$1');
 
     $routes->get('consoler', 'Consoler::index');
-
-    $routes->get('ganti-email', 'Ganti::email');
-
-    $routes->get('ganti-password', 'Ganti::password');
 });
 
 // --------------------------------------------------------------------

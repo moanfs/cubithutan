@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-
-	<title>Cubit Hutan</title>
+	<!-- title -->
+	<?= $this->renderSection('title'); ?>
 
 	<!-- Custom fonts for this template-->
 	<link href="<?= base_url('assets/sbadmin/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -17,17 +17,13 @@
 	<!-- Custom styles for this template-->
 	<link href="<?= base_url('assets/sbadmin/css/sb-admin-2.min.css') ?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style-admin.css') ?>">
-
 </head>
 
 <body id="page-top">
-
 	<!-- Page Wrapper -->
 	<div id="wrapper">
-
 		<!-- Sidebar -->
 		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
 			<!-- Sidebar - Brand -->
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= site_url('admin') ?>">
 				<div class="sidebar-brand-icon rotate-n-15">
@@ -35,10 +31,8 @@
 				</div>
 				<div class="sidebar-brand-text mx-3">Cubit Hutan</div>
 			</a>
-
 			<!-- Divider -->
 			<hr class="sidebar-divider my-0">
-
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item">
 				<a class="nav-link" href="<?= site_url('admin') ?>">
@@ -46,15 +40,12 @@
 					<span>Dashboard</span>
 				</a>
 			</li>
-
 			<!-- Divider -->
 			<hr class="sidebar-divider">
-
 			<!-- Heading -->
 			<div class="sidebar-heading">
 				Tampilan User
 			</div>
-
 			<!-- Nav Item - Podcast -->
 			<li class="nav-item">
 				<a class="nav-link" href="<?= site_url('admin/podcast') ?>">
@@ -62,7 +53,6 @@
 					<span>Podcast</span>
 				</a>
 			</li>
-
 			<!-- Nav Item - Materi -->
 			<li class="nav-item">
 				<a class="nav-link" href="<?= site_url('admin/materi') ?>">
@@ -70,22 +60,6 @@
 					<span>Materi</span>
 				</a>
 			</li>
-
-			<!-- Nav Item - Materi -->
-			<!-- <li class="nav-item">
-				<a class="nav-link" href="<?= site_url('admin/konseling') ?>">
-					<i class="fas fa-images"></i>
-					<span>Konseling</span>
-				</a>
-			</li> -->
-
-			<!-- Nav Item - Materi -->
-			<!-- <li class="nav-item">
-				<a class="nav-link" href="<?= site_url('admin/curhat') ?>">
-					<i class="fas fa-images"></i>
-					<span>Curhat</span>
-				</a>
-			</li> -->
 
 			<!-- Divider -->
 			<hr class="sidebar-divider">
@@ -142,8 +116,8 @@
 						<!-- Nav Item - User Information -->
 						<li class="nav-item dropdown no-arrow">
 							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="mr-2 d-none d-lg-inline text-gray-600 small"><b><?= userlogin()->first_name; ?></b></span>
-								<img class="img-profile rounded-circle" src="<?= base_url('assets/img/avatar.png') ?>">
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small"><b><?= userlogin()->callname; ?></b></span>
+								<img class="img-profile rounded-circle" src="<?= base_url('assets/profile/' . userlogin()->img_profile) ?>">
 							</a>
 							<!-- Dropdown - User Information -->
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -172,7 +146,7 @@
 			<footer class="sticky-footer bg-white">
 				<div class="container my-auto">
 					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; Cubit Hutan 2022</span>
+						<span>&copy; Cubit Hutan <?= date('Y') ?></span>
 					</div>
 				</div>
 			</footer>

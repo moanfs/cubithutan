@@ -26,17 +26,21 @@ class CubitHutan extends Migration
             'id'                => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true,],
             'id_group'          => ['type' => 'int', 'constraint' => 11, 'unsigned' => true],
             'slug'              => ['type' => 'VARCHAR', 'constraint' => 125],
-            'first_name'        => ['type' => 'VARCHAR', 'constraint' => 125],
-            'last_name'         => ['type' => 'VARCHAR', 'constraint' => 125],
+            'fullname'          => ['type' => 'VARCHAR', 'constraint' => 125],
+            'callname'          => ['type' => 'VARCHAR', 'constraint' => 125],
             'email'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'phone'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'pendidikan'        => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'agama'             => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'anakke'            => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'tempat_lahir'      => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'tanggal_lahir'     => ['type' => 'date', 'null' => true],
             'jenis_klamin'      => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'alamat'            => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'pass_hash'         => ['type' => 'varchar', 'constraint' => 125,],
-            'profile_consoler'  => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'profile_consoler'  => ['type' => 'varchar', 'constraint' => 125, 'default' => 'default.png'],
             'desc_consoler'     => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
+            'kuliah'            => ['type' => 'varchar', 'constraint' => 125, 'null' => true],
             'active_consoler'   => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
             'img_profile'       => ['type' => 'varchar', 'constraint' => 125, 'default' => 'profile.png'],
             'active'            => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
@@ -48,18 +52,6 @@ class CubitHutan extends Migration
         $this->forge->addKey('id_group');
         $this->forge->addForeignKey('id_group', 'auth_group', 'group_id', '', 'CASCADE');
         $this->forge->createTable('users');
-
-        /**
-         * Auth Group
-         */
-        // $this->forge->addField([
-        //     'group_id'          => ['type' => 'int', 'constraint' => 11, 'unsigned' => true],
-        //     'user_id'           => ['type' => 'int', 'constraint' => 11, 'unsigned' => true],
-        // ]);
-        // $this->forge->addKey(['group_id', 'user_id']);
-        // $this->forge->addForeignKey('group_id', 'auth_group', 'group_id', '', 'CASCADE');
-        // $this->forge->addForeignKey('user_id', 'users', 'id', '', 'CASCADE');
-        // $this->forge->createTable('auth_user_group', true);
 
         /**
          * tabel podcast

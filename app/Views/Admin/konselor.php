@@ -30,7 +30,8 @@
                             <th>No</th>
                             <th>Nama Lengkap</th>
                             <th>Email</th>
-                            <th>No Phone</th>
+                            <th>No WhatsApp</th>
+                            <th>Pendidikan</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -39,9 +40,10 @@
                         <?php foreach ($konselor as $key => $value) : ?>
                             <tr>
                                 <th><?= $key + 1; ?></th>
-                                <td><?= $value['first_name']; ?> <?= $value['last_name']; ?></td>
+                                <td><?= $value['fullname']; ?></td>
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['phone']; ?></td>
+                                <td><?= $value['pendidikan']; ?></td>
                                 <td>
                                     <?php if ($value['active_consoler'] == 1) : ?>
                                         <span class="badge badge-info">aktif</span>

@@ -18,7 +18,6 @@
                 </div>
                 <div class="mb-3">
                     <img src="<?= base_url('assets/materi/' . $materi['img']); ?>" alt="" height="400" class="mb-2 shadow">
-                    <!-- <label for="exampleFormControlTextarea1" class="form-label">Gambar Poster</label> -->
                     <input type="file" class="form-control" name="img" id="session"">
                 </div>
                 <div class=" mb-3">

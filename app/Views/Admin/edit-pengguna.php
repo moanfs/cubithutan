@@ -14,7 +14,11 @@
             <form action="<?= site_url('admin/pengguna/update/' . $pengguna['id']); ?>" method="post">
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Nama Pengguna</label>
-                    <input type="text" class="form-control" name="link" id="session" value="<?= $pengguna['first_name']; ?> <?= $pengguna['last_name']; ?>" readonly>
+                    <input type="text" class="form-control" name="link" id="session" value="<?= $pengguna['fullname']; ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Nama Panggilan</label>
+                    <input type="text" class="form-control" name="link" id="session" value="<?= $pengguna['callname']; ?>" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Email</label>
@@ -23,6 +27,10 @@
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">WhatsApp</label>
                     <input type="text" class="form-control" name="link" id="session" value="<?= $pengguna['phone']; ?>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Pendidikan</label>
+                    <input type="text" class="form-control" name="link" id="session" value="<?= $pengguna['pendidikan']; ?>" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Jenis Klamin</label>

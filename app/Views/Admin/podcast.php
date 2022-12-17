@@ -12,7 +12,8 @@
 
     <div class="card shadow">
         <div class="card-header py-3">
-            <a class="btn btn-primary" data-toggle="modal" data-target="#tambahpodcast">Tambah Episode</a>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#tambahpodcast">Tambah Podcast</a>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#tambahepisode">Tambah Session Baru</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -89,42 +90,51 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="modal-form">
-                            <div class="d-flex justify-content-between mb-3">
-                                <h1>Form Tambah Podcast</h1>
-                                <a class="btn btn-primary" data-toggle="modal" data-target="#tambahepisode">Tambah Episode</a>
-                            </div>
+                            <!-- <div class="d-flex justify-content-between mb-3"> -->
+                            <h1>Form Tambah Podcast</h1>
+
+                            <!-- </div> -->
                             <form action="<?= site_url('admin/podcast/create'); ?>" method="POST">
                                 <?= csrf_field() ?>
-                                <select name="episode" class="form-control">
-                                    <option selected disabled>Pilih Session</option>
-                                    <?php foreach ($episode as $row) : ?>
-                                        <option value="<?= $row['id_epi']; ?>"><?= $row['name']; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                                <select name="session" class="form-control">
-                                    <option selected disabled>Pilih Episode</option>
-                                    <option value="1">Satu</option>
-                                    <option value="2">Dua</option>
-                                    <option value="3">Tiga</option>
-                                    <option value="4">Empat</option>
-                                    <option value="5">Lima</option>
-                                    <option value="6">Enam</option>
-                                    <option value="7">Tujuh</option>
-                                    <option value="8">Delapan</option>
-                                    <option value="9">Sembilan</option>
-                                    <option value="10">Sepuluh</option>
-                                    <option value="11">Sebelas</option>
-                                    <option value="12">Dua Belas</option>
-                                    <option value="13">Tiga Belas</option>
-                                    <option value="14">Empat Belas</option>
-                                    <option value="15">Lima Belas</option>
-                                    <option value="16">Enam Belas</option>
-                                    <option value="17">Tuju Belas</option>
-                                    <option value="18">Delapan Belas</option>
-                                    <option value="19">Sembilan Belas</option>
-                                    <option value="20">Dua Puluh</option>
-                                </select>
-                                <input class="form-control" type="text" name="link" placeholder="link" />
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pilih Session *</label>
+                                    <select name="episode" class="form-control">
+                                        <option selected disabled>Pilih Session</option>
+                                        <?php foreach ($episode as $row) : ?>
+                                            <option value="<?= $row['id_epi']; ?>"><?= $row['name']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pilih Episode *</label>
+                                    <select name="session" class="form-control">
+                                        <option selected disabled>Pilih Episode</option>
+                                        <option value="1">Satu</option>
+                                        <option value="2">Dua</option>
+                                        <option value="3">Tiga</option>
+                                        <option value="4">Empat</option>
+                                        <option value="5">Lima</option>
+                                        <option value="6">Enam</option>
+                                        <option value="7">Tujuh</option>
+                                        <option value="8">Delapan</option>
+                                        <option value="9">Sembilan</option>
+                                        <option value="10">Sepuluh</option>
+                                        <option value="11">Sebelas</option>
+                                        <option value="12">Dua Belas</option>
+                                        <option value="13">Tiga Belas</option>
+                                        <option value="14">Empat Belas</option>
+                                        <option value="15">Lima Belas</option>
+                                        <option value="16">Enam Belas</option>
+                                        <option value="17">Tuju Belas</option>
+                                        <option value="18">Delapan Belas</option>
+                                        <option value="19">Sembilan Belas</option>
+                                        <option value="20">Dua Puluh</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Masukan Link *</label>
+                                    <input class="form-control" type="text" name="link" placeholder="link" />
+                                </div>
                                 <input class="btn btn-primary" type="submit" value="Simpan">
                             </form>
                         </div>

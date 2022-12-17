@@ -4,7 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cubit Hutan</title>
+	<!-- title -->
+	<?= $this->renderSection('title'); ?>
+
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/style.css') ?>">
 	<!-- bootstrap icon -->
@@ -19,36 +21,26 @@
 
 	<!-- this content -->
 	<?= $this->renderSection('content') ?>
-
-
 	<footer class="auth-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-3">
-					<p>Copyright 2022 Cubit Hutan</p>
-				</div>
-				<div class="col-12 col-md-3">
-					<a class="footer-link" href="<?= site_url('tentang-kami') ?>">Tentang Kami</a>
-				</div>
-				<div class="col-12 col-md-3">
-					<a class="footer-link" href="<?= site_url('kontak') ?>">Kontak</a>
-				</div>
-				<div class="col-12 col-md-3">
+
+				<div class="col-12 col-md-12">
 					<p>Media Sosial</p>
 					<div>
-						<a href="#">
+						<a href="https://instagram.com/cubithutan_?igshid=NDk5N2NlZjQ=" target="_blank">
 							<i class="bi bi-instagram"></i>
 						</a>
-						<a href="#">
+						<a href="https://twitter.com/CubitHutan" target="_blank">
 							<i class="bi bi-twitter"></i>
 						</a>
-						<a href="#">
-							<i class="bi bi-whatsapp"></i>
-						</a>
-						<a href="#">
+						<a href="https://open.spotify.com/show/6JAP3DCWjl3Rf36YqqUfZF?si=kTtFJReTTiGw6ii-WL9O0A&utm_source=copy-link" target="_blank">
 							<i class="bi bi-spotify"></i>
 						</a>
 					</div>
+				</div>
+				<div class="col-12 col-md-12">
+					<p> &copy; Cubit Hutan <?= date('Y') ?></p>
 				</div>
 			</div>
 		</div>

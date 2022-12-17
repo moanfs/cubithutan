@@ -1,9 +1,12 @@
 <!-- halaman lupa password -->
-
 <?= $this->extend('Layout/auth-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Lupa Password &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
+<!-- content -->
 <?= $this->section('content') ?>
-
 <main>
 	<div class="container">
 		<div class="auth-page">

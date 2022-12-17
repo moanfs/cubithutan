@@ -1,5 +1,9 @@
 <!-- halaman konseling individual online -->
 <?= $this->extend('Layout/user-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Konseling Online &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
 <?= $this->section('content') ?>
 <main>

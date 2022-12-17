@@ -14,6 +14,19 @@ function userSum()
         ->countAllResults();
 }
 
+function user()
+{
+    $db = \Config\Database::connect();
+    return $db->table('users')->where('id', session('id'))->get()->getRow();
+}
+
+function consolerLogin()
+{
+    $db = \Config\Database::connect();
+    return $db->table('users')
+        ->where('id_group', '2')
+        ->get()->getRowArray();
+}
 function userConsoler()
 {
     $db = \Config\Database::connect();

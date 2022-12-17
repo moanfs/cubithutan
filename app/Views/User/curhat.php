@@ -1,6 +1,9 @@
 <!-- halaman curhat -->
-
 <?= $this->extend('Layout/user-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Curhat &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
 <?= $this->section('content') ?>
 <main>

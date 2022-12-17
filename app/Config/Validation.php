@@ -7,6 +7,8 @@ use CodeIgniter\Validation\CreditCardRules;
 use CodeIgniter\Validation\FileRules;
 use CodeIgniter\Validation\FormatRules;
 use CodeIgniter\Validation\Rules;
+use \App\Validation\PasswordStrength;
+use \App\Validation\WhatsappValid;
 
 class Validation extends BaseConfig
 {
@@ -25,6 +27,9 @@ class Validation extends BaseConfig
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
+        Validation::class,
+        PasswordStrength::class,
+        WhatsappValid::class,
     ];
 
     /**

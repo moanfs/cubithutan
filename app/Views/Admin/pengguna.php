@@ -30,7 +30,8 @@
                             <th>No</th>
                             <th>Nama Lengkap</th>
                             <th>Email</th>
-                            <th>No Phone</th>
+                            <th>No WhatsApp</th>
+                            <th>Pendidikan</th>
                             <th>Jenis Kelamin</th>
                             <th>Aksi</th>
                         </tr>
@@ -39,9 +40,10 @@
                         <?php foreach ($pengguna as $key => $value) : ?>
                             <tr>
                                 <th><?= $key + 1; ?></th>
-                                <td><?= $value['first_name']; ?> <?= $value['last_name']; ?></td>
+                                <td><?= $value['fullname']; ?></td>
                                 <td><?= $value['email']; ?></td>
                                 <td><?= $value['phone']; ?></td>
+                                <td><?= $value['pendidikan']; ?></td>
                                 <td><?= $value['jenis_klamin']; ?></td>
                                 <td><a class="btn btn-primary" href="<?= site_url('admin/pengguna/edit/' . $value['id'] . '/' . $value['slug']); ?>">Lihat Detail</a></td>
                             </tr>

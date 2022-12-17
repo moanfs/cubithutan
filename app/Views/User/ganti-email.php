@@ -1,6 +1,9 @@
 <!-- halaman login -->
-
-<?= $this->extend('Layout/auth-layout2') ?>
+<?= $this->extend('Layout/auth-layout') ?>
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Ganti Email &mdash; Cubit Hutan</title>
+<?= $this->endSection(); ?>
 
 <?= $this->section('content') ?>
 
