@@ -30,20 +30,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="konseling-tab">
-				<ul class="nav nav-pills" id="tabs">
-					<li class="nav-item">
-						<button class="nav-link active">Tujuan Curhat</button>
-					</li>
-				</ul>
-				<div class="tab-content" id="pillsContent">
-					<div class="tab-pane show active" id="tujuan" tabindex="0">
-						<h2>Tujuan Dari Curhat</h2>
-						<p>Ketika anda merasa bahwa hidup ini tidak lagi tenang secara emosional:</p>
-						<p>tujuan pada sesi ini iyalah untuk mencurahkan isi hati yang terpendam untuk meringankan isi pikiran</p>
-
-					</div>
-				</div>
+			<div class="konseling-tujuan">
+				<h2>Tujuan Dari Curhat</h2>
+				<p>Ketika anda merasa bahwa hidup ini tidak lagi tenang secara emosional:</p>
+				<p>tujuan pada sesi ini iyalah untuk mencurahkan isi hati yang terpendam untuk meringankan isi pikiran</p>
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,10 @@
 <!-- halaman materi admin -->
 
 <?= $this->extend('Layout/admin-layout') ?>
-
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Materi &mdash; Admin Cubit Hutan</title>
+<?= $this->endSection(); ?>
 <?= $this->section('content') ?>
 
 <!-- Begin Page Content -->

@@ -67,12 +67,12 @@
 						<button class="nav-button"><a href="<?= site_url('login') ?>">Masuk</a></button>
 					<?php else : ?>
 						<!-- setelah login -->
-						<img src="<?= base_url('assets/profile/' . userlogin()->img_profile) ?>" width="38" class="rounded-circle" />
+						<img class="nav-avatar" src="<?= base_url('assets/profile/' . userlogin()->img_profile) ?>" />
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
 								<?= userlogin()->callname; ?>
 							</a>
-							<ul class="dropdown-menu">
+							<ul class="dropdown-menu dropdown-menu-end">
 								<li class="dropdown-item">
 									<a class="nav-link" href="<?= site_url('profile/'); ?>">Profil Saya</a>
 								</li>
@@ -141,6 +141,7 @@
 
 	<!-- javascript -->
 	<script type="text/javascript" src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/js/bs5-lighbox.min.js') ?>"></script>
 </body>
 
 </html>

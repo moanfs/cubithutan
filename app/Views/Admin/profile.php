@@ -2,7 +2,7 @@
 <?= $this->extend('Layout/admin-layout') ?>
 <!-- title -->
 <?= $this->Section('title') ?>
-<title>Prifile &mdash; Admin Cubit Hutan</title>
+<title>Profile &mdash; Admin Cubit Hutan</title>
 <?= $this->endSection(); ?>
 <!-- content -->
 <?= $this->section('content') ?>
@@ -94,7 +94,7 @@
                             </div>
 
                             <div class="col-12">
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileModal">Perbarui Profil</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#profileModal">Perbarui Profil</button>
                             </div>
                         </div>
                     </div>

@@ -22,6 +22,13 @@ body {
 .navbar .navbar-right img {
   margin-right: 8px;
 }
+.navbar .navbar-right .nav-avatar {
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
 .navbar .navbar-right .nav-button {
   padding: 4px 16px;
   background-color: inherit;
@@ -437,12 +444,12 @@ body {
 .modal-profile .modal-dialog .modal-body .card .profile-img p {
   color: #6D757D;
 }
-.modal-profile .modal-dialog .modal-body .modal-form {
-  padding: 8px;
-}
-.modal-profile .modal-dialog .modal-body .modal-form h1 {
+.modal-profile .modal-dialog .modal-body h1 {
   font-size: 1.25rem;
   margin-bottom: 16px;
+}
+.modal-profile .modal-dialog .modal-body .modal-form {
+  padding: 8px;
 }
 .modal-profile .modal-dialog .modal-body .modal-form form .form-control {
   margin-bottom: 16px;
@@ -454,6 +461,14 @@ body {
 .modal-profile .modal-dialog .modal-body .modal-form form .form-button .btn {
   margin: 0 8px;
   padding: 4px 24px;
+}
+.modal-profile .modal-dialog .modal-body .edit-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-profile .modal-dialog .modal-body .edit-img label div {
+  margin: 16px;
 }
 
 .konseling-page {
@@ -488,33 +503,15 @@ body {
 .konseling-page .row .konseling-text p {
   text-align: justify;
 }
-.konseling-page .konseling-tab {
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.konseling-page .konseling-tab .nav-pills {
+.konseling-page .konseling-tujuan {
   margin-bottom: 32px;
 }
-.konseling-page .konseling-tab .nav-pills .nav-link {
-  margin: 0 16px;
-  padding: 8px 32px;
-  border: 1px #292B2C solid;
-  border-radius: 24px;
-  color: #292B2C;
-}
-.konseling-page .konseling-tab .nav-pills .active {
-  border: 1px #FFFFFF solid;
-  color: #FFFFFF;
-}
-.konseling-page .konseling-tab .tab-content h2 {
+.konseling-page .konseling-tujuan h2 {
   margin-bottom: 8px;
   font-size: 1.5rem;
 }
-.konseling-page .konseling-tab .tab-content p {
+.konseling-page .konseling-tujuan p {
   margin-bottom: 8px;
-  text-align: justify;
 }
 
 .podcast-page {
@@ -542,14 +539,16 @@ body {
   font-size: 2.25rem;
 }
 .materi-page .materi-poster {
-  margin-top: 32px;
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-top: 16px;
+  margin-left: 0;
+  margin-right: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.materi-page .materi-poster img {
+.materi-page .materi-poster .materi-img {
   margin: 16px;
+  width: 300px;
   max-width: 100%;
   height: auto;
 }
@@ -625,6 +624,13 @@ body {
   display: flex;
   align-items: center;
 }
+.contact-page .contact-item a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-page .contact-item a:hover {
+  text-decoration: underline;
+}
 .contact-page .contact-item .bi {
   margin-right: 32px;
   font-size: 1.75rem;
@@ -643,13 +649,13 @@ body {
   justify-content: center;
 }
 .profile-page .card .profile-img img {
-  margin: 48px 16px;
+  margin: 16px 0;
+}
+.profile-page .card .card-body .label {
+  font-weight: 600;
 }
 .profile-page .card .card-body .col-12 {
   margin: 4px 0;
-}
-.profile-page .card .card-body .col-12 .label {
-  font-weight: 600;
 }
 .profile-page .card .card-body .col-12 a {
   margin-left: 16px;

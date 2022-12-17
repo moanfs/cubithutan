@@ -1,7 +1,10 @@
 <!-- halaman index admin -->
 
 <?= $this->extend('Layout/admin-layout') ?>
-
+<!-- title -->
+<?= $this->Section('title') ?>
+<title>Pengguna &mdash; Admin Cubit Hutan</title>
+<?= $this->endSection(); ?>
 <?= $this->section('content') ?>
 <!-- Begin Page Content -->
 <div class="container-fluid materi-page">

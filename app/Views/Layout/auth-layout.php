@@ -24,8 +24,7 @@
 	<footer class="auth-footer">
 		<div class="container">
 			<div class="row">
-
-				<div class="col-12 col-md-12">
+				<div class="col-12">
 					<p>Media Sosial</p>
 					<div>
 						<a href="https://instagram.com/cubithutan_?igshid=NDk5N2NlZjQ=" target="_blank">
@@ -39,7 +38,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-12 col-md-12">
+				<div class="col-12">
 					<p> &copy; Cubit Hutan <?= date('Y') ?></p>
 				</div>
 			</div>

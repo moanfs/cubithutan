@@ -26,7 +26,7 @@
                             <form class="auth-form" method="post" action="<?= site_url('ganti-password/' . session('id')) ?>">
                                 <?= csrf_field() ?>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Ganti Passowrd</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Ganti Password</label>
                                     <input type="password" class="form-control <?= ($validation->hasError('pass_old')) ? 'is-invalid' : ''; ?>"" name=" pass_old" id="session" placeholder="password lama">
                                     <div class="invalid-feedback">
                                         <?= $validation->getError('pass_old'); ?>

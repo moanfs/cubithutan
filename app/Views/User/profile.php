@@ -31,7 +31,7 @@
 					<div class="card">
 						<div class="card-body profile-img">
 							<a data-bs-toggle="modal" data-bs-target="#fotoModal">
-								<p><b>Profile <?= $profile['callname']; ?></b></p>
+								<p class="label">Profile <?= $profile['callname']; ?></p>
 								<img src="<?= base_url('assets/profile/' . $profile['img_profile']) ?>" width="300" class="rounded img-thumbnail" />
 								<div id="emailHelp" class="form-text ms-2">Klik Gambar untuk update foto profile</div>
 							</a>
@@ -210,35 +210,32 @@
 </div>
 
 <div class="modal modal-profile" id="fotoModal">
-	<div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+	<div class="modal-dialog modal-dialog-centered modal modal-fullscreen-sm-down">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 			</div>
 			<div class="modal-body">
-				<div class="row">
-					<h3>Perbarui Profil</h3>
-					<!-- <div class="> -->
-					<div class="card">
-						<!-- klik card untuk pilih upload -->
-						<form action="<?= site_url('profile/ganti-foto/' . $profile['id']); ?>" method="post" enctype="multipart/form-data">
-							<?= csrf_field() ?>
-							<label class="card-body profile-img" for="uploadPhoto">
-								<img src="<?= base_url('assets/profile/' . $profile['img_profile']) ?>" width="300" class="rounded img-thumbnail" />
+				<h1>Perbarui Profil</h1>
+				<!-- <div class="> -->
+				<!-- klik card untuk pilih upload -->
+				<form class="edit-img" action="<?= site_url('profile/ganti-foto/' . $profile['id']); ?>" method="post" enctype="multipart/form-data">
+					<?= csrf_field() ?>
+					<div>
+						<label for="uploadPhoto">
+							<img src="<?= base_url('assets/profile/' . $profile['img_profile']) ?>" width="300" class="rounded img-thumbnail" />
+							<div>
 								<p>Besar file maksimum 2 MB.</p>
 								<p>Format file JPG/JPEG/PNG.</p>
-							</label>
-							<input type="file" id="uploadPhoto" class="form-control" name="img_profile" hidden />
-							<div class="d-flex justify-content-center">
-								<button type="submit" class="btn btn-primary m-2">Update</button>
 							</div>
-						</form>
+						</label>
+						<input type="file" id="uploadPhoto" class="form-control" name="img_profile" hidden />
 					</div>
-					<!-- </div> -->
-					<div class="modal modal-profile" id="profileModal">
-
+					<div class="d-flex justify-content-center">
+						<button type="submit" class="btn btn-primary m-2">Update</button>
 					</div>
-				</div>
+				</form>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>

@@ -72,12 +72,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="konseling-tab">
-				<div class="tab-content" id="pillsContent">
-					<div class="tab-pane show active col-8 mx-auto text-center" id="tujuan" tabindex="0">
-						<h2>Konseling Offline bertujuan untuk melaksanakan konseling secara lebih nyaman dan tanpa terganggu oleh kondisi sinyal sehingga membuat proses konseling berjalan lebih nyaman dan lancar. Dan setiap orang memiliki keinginan atau kenyamanan yang berbeda, ada yang nyaman secara langsung tatap muka maka pilihan layanan konseling offline ini cocok dan sangat berguna.</p>
-					</div>
-				</div>
+			<div class="konseling-tujuan">
+				<h2>Tujuan Dari Konseling Individual Offline</h2>
+				<P>Konseling Offline bertujuan untuk melaksanakan konseling secara lebih nyaman dan tanpa terganggu oleh kondisi sinyal sehingga membuat proses konseling berjalan lebih nyaman dan lancar. Dan setiap orang memiliki keinginan atau kenyamanan yang berbeda, ada yang nyaman secara langsung tatap muka maka pilihan layanan konseling offline ini cocok dan sangat berguna.</p>
 			</div>
 		</div>
 	</div>

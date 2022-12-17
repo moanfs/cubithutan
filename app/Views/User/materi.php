@@ -13,11 +13,10 @@
 			<h1>Materi</h1>
 			<div class="materi-poster">
 				<?php foreach ($materi as $key => $value) : ?>
-					<img width="300px" src="<?= base_url('assets/materi/' . $value['img']) ?>" />
+					<a href="<?= base_url('assets/materi/' . $value['img']) ?>" data-toggle="lightbox" data-gallery="materi">
+						<img class="materi-img img-thumbnail" src="<?= base_url('assets/materi/' . $value['img']) ?>" />
+					</a>
 				<?php endforeach; ?>
-				<!-- <img src="<?= base_url('assets/img/poster.jpg') ?>" width="300px" />
-				<img src="<?= base_url('assets/img/poster.jpg') ?>" width="300px" />
-				<img src="<?= base_url('assets/img/poster.jpg') ?>" /> -->
 			</div>
 		</div>
 	</div>
